@@ -2,15 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Button left_button;
+    public Button right_button;
     private Rigidbody rb;
     public Camera CameraObject;
     private Transform ownTransform;
     public bool canJump = false;
     private Vector3 cam_offset = new Vector3(10, 0, 0);
-
+    private Vector3 hide_button = new Vector3(0, 1, 1);
+    public void push_left()
+    {
+        rb.AddForce(0, 0, -250);
+        left_button.transform.localScale = hide_button;
+        right_button.transform.localScale = hide_button;
+    }
+    public void push_right()
+    {
+        rb.AddForce(0, 0, 250);
+        left_button.transform.localScale = hide_button;
+        right_button.transform.localScale = hide_button;
+    }
     // Start is called before the first frame update
     void Start()
     {
