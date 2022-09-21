@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canJump = false;
     private Vector3 cam_offset = new Vector3(10, 0, 0);
     private Vector3 hide_button = new Vector3(0, 1, 1);
+    public Transform starting_pos;
     public void push_left()
     {
         rb.AddForce(0, 0, -250);
@@ -31,11 +32,17 @@ public class PlayerMovement : MonoBehaviour
         left_button.interactable = false;
         right_button.interactable = false;
     }
+    public void kill_player()
+    {
+        ownTransform = starting_pos;
+    }
     // Start is called before the first frame update
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();
         ownTransform = GetComponent<Transform>();
+        ownTransform = starting_pos;
     }
 
     private void LateUpdate()
@@ -57,8 +64,12 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
         }
+        else if(other.gameObject.tag == "Player Killer")
+        {
+            kill_player();
+        }
     }
-
+ 
     // Update is called once per frame
     void FixedUpdate()
     {
