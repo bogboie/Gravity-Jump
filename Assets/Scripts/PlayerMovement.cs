@@ -20,12 +20,16 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(0, 0, -250);
         left_button.transform.localScale = hide_button;
         right_button.transform.localScale = hide_button;
+        left_button.interactable = false;
+        right_button.interactable = false;
     }
     public void push_right()
     {
         rb.AddForce(0, 0, 250);
         left_button.transform.localScale = hide_button;
         right_button.transform.localScale = hide_button;
+        left_button.interactable = false;
+        right_button.interactable = false;
     }
     // Start is called before the first frame update
     void Start()
