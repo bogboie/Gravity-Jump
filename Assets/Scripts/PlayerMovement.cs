@@ -15,7 +15,15 @@ public class PlayerMovement : MonoBehaviour
     public bool canJump = false;
     private Vector3 cam_offset = new Vector3(10, 0, 0);
     private Vector3 hide_button = new Vector3(0, 1, 1);
+    private Vector3 show_button = new Vector3(1, 1, 1);
     public Transform starting_pos;
+    public void show_buttons()
+    {
+        left_button.transform.localScale = show_button;
+        right_button.transform.localScale = show_button;
+        left_button.interactable = true;
+        right_button.interactable = true;
+    }
     public void push_left()
     {
         rb.AddForce(0, 0, -250);
@@ -62,6 +70,10 @@ public class PlayerMovement : MonoBehaviour
         else if (other.gameObject.tag == "Player Killer")
         {
             kill_player();
+        }
+        else if (other.gameObject.tag == "Choice")
+        {
+            show_buttons();
         }
     }
 
