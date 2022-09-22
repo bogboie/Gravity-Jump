@@ -34,15 +34,18 @@ public class PlayerMovement : MonoBehaviour
     }
     public void kill_player()
     {
-        ownTransform = starting_pos;
+        ownTransform.position = starting_pos.position;
+        rb.velocity = new Vector3(0,0,0);
+        rb.angularVelocity = new Vector3(0, 0, 0);
     }
+
     // Start is called before the first frame update
     void Start()
     {
 
         rb = GetComponent<Rigidbody>();
         ownTransform = GetComponent<Transform>();
-        ownTransform = starting_pos;
+        ownTransform.position = starting_pos.position;
     }
 
     private void LateUpdate()
@@ -56,6 +59,10 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = true;
         }
+        else if (other.gameObject.tag == "Player Killer")
+        {
+            kill_player();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -63,10 +70,6 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.tag == "Ground")
         {
             canJump = false;
-        }
-        else if(other.gameObject.tag == "Player Killer")
-        {
-            kill_player();
         }
     }
  
