@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void push_left()
     {
-        rb.AddForce(0, 0, -250);
+        rb.AddForce(0, 0, -1200);
         left_button.transform.localScale = hide_button;
         right_button.transform.localScale = hide_button;
         left_button.interactable = false;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void push_right()
     {
-        rb.AddForce(0, 0, 250);
+        rb.AddForce(0, 0, 1200);
         left_button.transform.localScale = hide_button;
         right_button.transform.localScale = hide_button;
         left_button.interactable = false;
@@ -75,8 +75,12 @@ public class PlayerMovement : MonoBehaviour
         {
             show_buttons();
         }
-    }
+        else if (other.gameObject.tag == "Teleport")
+        {
+            ownTransform.position = new Vector3(transform.position.x, transform.position.y, -transform.position.z);
 
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "Ground")
@@ -89,7 +93,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space) && canJump) {
-            rb.AddForce(0,500,0);
+            rb.AddForce(0,2000,0);
+            canJump = false;
         }
     }
 }
