@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 hide_button = new Vector3(0, 1, 1);
     private Vector3 show_button = new Vector3(1, 1, 1);
     public Transform starting_pos;
+    public GameObject gateleft;
+    public GameObject gateright;
+    private Collider gateColliderleft;
+    private Collider gateColliderright;
+
     public void show_buttons()
     {
         left_button.transform.localScale = show_button;
@@ -50,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gateColliderleft = gateleft.GetComponent<BoxCollider>();
+        gateColliderright = gateright.GetComponent<BoxCollider>();
         rb = GetComponent<Rigidbody>();
         ownTransform = GetComponent<Transform>();
         ownTransform.position = starting_pos.position;
@@ -77,13 +83,16 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.gameObject.tag == "Teleport")
         {
+            gateColliderleft.enabled = false;
+            gateColliderright.enabled = false;
             ownTransform.position = new Vector3(transform.position.x, transform.position.y, -transform.position.z);
 
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Ground")
+        tag = other.gameObject.tag;
+        if(tag == "Ground")
         {
             canJump = false;
         }
