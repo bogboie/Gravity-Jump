@@ -22,8 +22,9 @@ public class PlayerMovement : MonoBehaviour
     private Collider gateColliderleft;
     private Collider gateColliderright;
 
-    public void show_buttons()
+    private void show_buttons()
     {
+        print("show buttons was called");
         left_button.transform.localScale = show_button;
         right_button.transform.localScale = show_button;
         left_button.interactable = true;
@@ -92,9 +93,15 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         tag = other.gameObject.tag;
-        if(tag == "Ground")
+        if (tag == "Ground")
         {
             canJump = false;
+        }
+        else if (tag == "Choice") {
+            left_button.transform.localScale = hide_button;
+            right_button.transform.localScale = hide_button;
+            left_button.interactable = false;
+            right_button.interactable = false;
         }
     }
  
