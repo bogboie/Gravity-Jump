@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void show_buttons()
     {
-        print("show buttons was called");
         left_button.transform.localScale = show_button;
         right_button.transform.localScale = show_button;
         left_button.interactable = true;
@@ -51,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
         ownTransform.position = starting_pos.position;
         rb.velocity = new Vector3(0,0,0);
         rb.angularVelocity = new Vector3(0, 0, 0);
+        gateColliderleft.enabled = true;
+        gateColliderright.enabled = true;
     }
 
     // Start is called before the first frame update
