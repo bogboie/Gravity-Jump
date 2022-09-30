@@ -93,12 +93,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        tag = other.gameObject.tag;
-        if (tag == "Ground")
+        if (other.gameObject.tag == "Ground")
         {
             canJump = false;
         }
-        else if (tag == "Choice") {
+        else if (other.gameObject.tag == "Choice") {
             left_button.transform.localScale = hide_button;
             right_button.transform.localScale = hide_button;
             left_button.interactable = false;

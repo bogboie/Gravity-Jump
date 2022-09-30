@@ -12,14 +12,15 @@ public class TeleportGate : MonoBehaviour
     private void Awake()
     {
         gateColliderleft = gateleft.GetComponent<BoxCollider>();
+        gateColliderright = gateright.GetComponent<BoxCollider>();
     }
     void OnTriggerExit(Collider other)
     {
-        tag = other.gameObject.tag;
-        if (tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             gateColliderleft.enabled = true;
             gateColliderright.enabled = true;
+            print("Reactivating Gates");
         }
     }
 }
