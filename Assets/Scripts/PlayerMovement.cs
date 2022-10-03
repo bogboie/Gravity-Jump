@@ -83,13 +83,6 @@ public class PlayerMovement : MonoBehaviour
         {
             show_buttons();
         }
-        else if (other.gameObject.tag == "Teleport")
-        {
-            gateColliderleft.enabled = false;
-            gateColliderright.enabled = false;
-            ownTransform.position = new Vector3(transform.position.x, transform.position.y, -transform.position.z);
-
-        }
     }
     private void OnTriggerExit(Collider other)
     {

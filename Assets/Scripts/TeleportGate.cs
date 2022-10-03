@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class TeleportGate : MonoBehaviour
 {
-    public GameObject gateleft;
-    public GameObject gateright;
-    private Collider gateColliderleft;
-    private Collider gateColliderright;
+    public GameObject Player;
+    public GameObject other_Gate;
+    private TeleportGate other_Gate_Script;
+    private Transform Player_Transform;
+    public bool Gate_Locked = false;
+    private string _tag;
 
     private void Awake()
     {
-        gateColliderleft = gateleft.GetComponent<BoxCollider>();
-        gateColliderright = gateright.GetComponent<BoxCollider>();
+        Player_Transform = Player.GetComponent<Transform>();
+        other_Gate_Script = other_Gate.GetComponent<TeleportGate>();
+
     }
-    void OnTriggerExit(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (Gate_Locked) { return; }
+        _tag = other.gameObject.tag;
+        if (_tag == "Player")
         {
-            gateColliderleft.enabled = true;
-            gateColliderright.enabled = true;
-            print("Reactivating Gates");
+            Gate_Locked = true;
+            other_Gate_Script.Gate_Locked = true;
+            Player_Transform.position = new Vector3(Player_Transform.position.x, Player_Transform.position.y, -Player_Transform.position.z);
         }
     }
 }
+

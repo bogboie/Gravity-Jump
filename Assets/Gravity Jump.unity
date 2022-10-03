@@ -3542,6 +3542,7 @@ GameObject:
   - component: {fileID: 681558280}
   - component: {fileID: 681558279}
   - component: {fileID: 681558278}
+  - component: {fileID: 681558281}
   m_Layer: 0
   m_Name: Teleport Trigger Right
   m_TagString: Teleport
@@ -3627,6 +3628,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681558276}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &681558281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681558276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 624689410}
+  other_Gate: {fileID: 1060721161}
+  Gate_Locked: 0
 --- !u!1001 &688524539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4396,9 +4412,9 @@ GameObject:
   - component: {fileID: 901166296}
   - component: {fileID: 901166295}
   - component: {fileID: 901166294}
-  - component: {fileID: 901166293}
+  - component: {fileID: 901166297}
   m_Layer: 0
-  m_Name: Left Teleport Deactivator
+  m_Name: Left Gate Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4412,27 +4428,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901166291}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1421516, y: -5.0097427, z: -22}
+  m_LocalPosition: {x: 1.1421516, y: -5.0097427, z: -19}
   m_LocalScale: {x: 15.3483515, y: 87.37206, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &901166293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901166291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gateleft: {fileID: 1060721161}
-  gateright: {fileID: 681558276}
 --- !u!65 &901166294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4444,8 +4446,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &901166295
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4496,6 +4498,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901166291}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &901166297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901166291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a80b6629133949fcb4c9708d656c496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Left_Gate: {fileID: 1060721161}
+  Right_Gate: {fileID: 681558276}
 --- !u!1 &923548283
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,6 +5334,7 @@ GameObject:
   - component: {fileID: 1060721165}
   - component: {fileID: 1060721164}
   - component: {fileID: 1060721163}
+  - component: {fileID: 1060721166}
   m_Layer: 0
   m_Name: Teleport Trigger Left
   m_TagString: Teleport
@@ -5403,6 +5420,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060721161}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1060721166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060721161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 624689410}
+  other_Gate: {fileID: 681558276}
+  Gate_Locked: 0
 --- !u!1001 &1080930668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5891,9 +5923,9 @@ GameObject:
   - component: {fileID: 1160111629}
   - component: {fileID: 1160111628}
   - component: {fileID: 1160111627}
-  - component: {fileID: 1160111626}
+  - component: {fileID: 1160111630}
   m_Layer: 0
-  m_Name: Right Teleport Deactivator
+  m_Name: Right Gate Activator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5907,27 +5939,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160111624}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1421516, y: -5.0097427, z: 22}
+  m_LocalPosition: {x: 1.1421516, y: -5.0097427, z: 18.8}
   m_LocalScale: {x: 15.3483515, y: 87.37206, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1160111626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160111624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gateleft: {fileID: 1060721161}
-  gateright: {fileID: 681558276}
 --- !u!65 &1160111627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5939,8 +5957,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: -1}
 --- !u!23 &1160111628
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5991,6 +6009,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160111624}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1160111630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160111624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a80b6629133949fcb4c9708d656c496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Left_Gate: {fileID: 1060721161}
+  Right_Gate: {fileID: 681558276}
 --- !u!1001 &1160938810
 PrefabInstance:
   m_ObjectHideFlags: 0
