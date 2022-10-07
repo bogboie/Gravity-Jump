@@ -22,6 +22,13 @@ public class PlayerMovement : MonoBehaviour
     private Collider gateColliderleft;
     private Collider gateColliderright;
 
+    private void hide_buttons()
+    {
+        left_button.transform.localScale = hide_button;
+        right_button.transform.localScale = hide_button;
+        left_button.interactable = false;
+        right_button.interactable = false;
+    }
     private void show_buttons()
     {
         left_button.transform.localScale = show_button;
@@ -32,23 +39,17 @@ public class PlayerMovement : MonoBehaviour
     public void push_left()
     {
         rb.AddForce(0, 0, -1200);
-        left_button.transform.localScale = hide_button;
-        right_button.transform.localScale = hide_button;
-        left_button.interactable = false;
-        right_button.interactable = false;
+        hide_buttons();
     }
     public void push_right()
     {
         rb.AddForce(0, 0, 1200);
-        left_button.transform.localScale = hide_button;
-        right_button.transform.localScale = hide_button;
-        left_button.interactable = false;
-        right_button.interactable = false;
+        hide_buttons();
     }
     public void kill_player()
     {
         ownTransform.position = starting_pos.position;
-        rb.velocity = new Vector3(0,0,0);
+        rb.velocity = new Vector3(0, 0, 0);
         rb.angularVelocity = new Vector3(0, 0, 0);
         gateColliderleft.enabled = true;
         gateColliderright.enabled = true;
@@ -62,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         ownTransform = GetComponent<Transform>();
         ownTransform.position = starting_pos.position;
+        hide_buttons();
     }
 
     private void LateUpdate()
@@ -84,26 +86,28 @@ public class PlayerMovement : MonoBehaviour
             show_buttons();
         }
     }
+    public void Jump()
+    {
+        if (canJump)
+        {
+            rb.AddForce(0, 2000, 0);
+            canJump = false;
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Ground")
         {
             canJump = false;
         }
-        else if (other.gameObject.tag == "Choice") {
+        else if (other.gameObject.tag == "Choice")
+        {
             left_button.transform.localScale = hide_button;
             right_button.transform.localScale = hide_button;
             left_button.interactable = false;
             right_button.interactable = false;
         }
     }
- 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (Input.GetKey(KeyCode.Space) && canJump) {
-            rb.AddForce(0,2000,0);
-            canJump = false;
-        }
-    }
 }
+ 
+   
