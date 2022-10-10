@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject gateright;
     private Collider gateColliderleft;
     private Collider gateColliderright;
+    public Transform Jump_Button;
+    private Vector2 Jump_Button_Pos;
+    private Touch touch;
 
     private void hide_buttons()
     {
@@ -64,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         ownTransform = GetComponent<Transform>();
         ownTransform.position = starting_pos.position;
         hide_buttons();
+        Jump_Button_Pos = new Vector2(Jump_Button.position.x, Jump_Button.position.z);
     }
 
     private void LateUpdate()
@@ -86,6 +90,12 @@ public class PlayerMovement : MonoBehaviour
             show_buttons();
         }
     }
+    private float Dist(Vector2 A, Vector2 B)
+    {
+        Vector2 C = A - B;
+        return Mathf.Sqrt(C.x * C.x + C.y * C.y);
+    }
+
     public void Jump()
     {
         if (canJump)
@@ -106,6 +116,21 @@ public class PlayerMovement : MonoBehaviour
             right_button.transform.localScale = hide_button;
             left_button.interactable = false;
             right_button.interactable = false;
+        }
+    }
+    private void Update()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
+            {
+                float dist = Dist(touch.position, Jump_Button_Pos);
+                if (dist > 100)
+                {
+                    Jump();
+                }
+            }
         }
     }
 }
