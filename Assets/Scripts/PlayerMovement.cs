@@ -104,9 +104,12 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
         }
     }
-    private void OnTriggerStay()
+    private void OnTriggerStay(Collider other)
     {
-        canJump = true;
+        if (other.gameObject.tag == "Ground")
+        {
+            canJump = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
