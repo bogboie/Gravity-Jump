@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform Jump_Button;
     private Vector2 Jump_Button_Pos;
     private Touch touch;
+    private GameObject[] objects;
 
     private void hide_buttons()
     {
@@ -56,11 +57,18 @@ public class PlayerMovement : MonoBehaviour
         rb.angularVelocity = new Vector3(0, 0, 0);
         gateColliderleft.enabled = true;
         gateColliderright.enabled = true;
+
+        foreach (GameObject obj in objects) {
+          ActivatedMove script = obj.GetComponent<ActivatedMove>();
+          script.Reset();
+        }
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        objects = GameObject.FindGameObjectsWithTag("Activated Platform");
         gateColliderleft = gateleft.GetComponent<BoxCollider>();
         gateColliderright = gateright.GetComponent<BoxCollider>();
         rb = GetComponent<Rigidbody>();
@@ -141,5 +149,3 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
- 
-   

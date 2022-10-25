@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ActivatedMove : MonoBehaviour
 {
+
+    public GameObject Player;
+    public Rigidbody Player_Rigidbody;
+    private float zed;
     public float Period = 10;
     public float delta_Z = 10;
     private Vector3 Start_Pos;
@@ -22,23 +26,33 @@ public class ActivatedMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!touched)
+        if (touching)
         {
-            passed_time = Time.time;
+            passed_time += Time.deltaTime;
         }
-        Start_Pos.z = Start_Z + delta_Z * Mathf.Sin(Two_Pi * (Time.time-passed_time) / Period);
-        this.transform.position = Start_Pos;
+        Start_Pos.z = Start_Z + delta_Z * Mathf.Sin(Two_Pi * (passed_time) / Period);
+        transform.position = Start_Pos;
 
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            touched = true;
-        }
-    }
+
     public void Reset()
     {
+        touching = false;
+        passed_time = 0
+    }
+    private void OnTriggerEnter(Collider other) {
+      if (other.gameObject == Player) {
+        touched = true;
+        zed = Player_Rigidbody.velocity.z;
+        Player_Rigidbody.velocity = Vector3.zero;
+        Player.transform.SetParent(transform);
+      }
+    }
+    private void OnTriggerExit(Collider other) {
+      if (other.gameObject == Player) {
         touched = false;
+        Player.transform.SetParent(null);
+        Player_Rigidbody.velocity.Set(Player_Rigidbody.velocity.x,Player_Rigidbody.velocity.y,zed);
+      }
     }
 }
