@@ -16,6 +16,7 @@ public class ActivatedMove : MonoBehaviour
     private float passed_time;
     private bool touched;
     private const float Two_Pi = 2 * Mathf.PI;
+    private bool touching;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,21 +39,21 @@ public class ActivatedMove : MonoBehaviour
     public void Reset()
     {
         touching = false;
-        passed_time = 0
+        passed_time = 0;
     }
     private void OnTriggerEnter(Collider other) {
       if (other.gameObject == Player) {
-        touched = true;
-        zed = Player_Rigidbody.velocity.z;
-        Player_Rigidbody.velocity = Vector3.zero;
-        Player.transform.SetParent(transform);
+        touching = true;
+        //zed = Player_Rigidbody.velocity.z;
+        //Player_Rigidbody.velocity = Vector3.zero;
+        //Player.transform.SetParent(transform);
       }
     }
     private void OnTriggerExit(Collider other) {
       if (other.gameObject == Player) {
-        touched = false;
-        Player.transform.SetParent(null);
-        Player_Rigidbody.velocity.Set(Player_Rigidbody.velocity.x,Player_Rigidbody.velocity.y,zed);
+        touching = false;
+        //Player.transform.SetParent(null);
+        //Player_Rigidbody.velocity.Set(Player_Rigidbody.velocity.x,Player_Rigidbody.velocity.y,zed);
       }
     }
 }
