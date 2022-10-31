@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e305ba48b0d418bad144e7c22ed5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadTime: 6.49
+  LoadTime: 7.43
   DotMain: {fileID: 1980477730373865022, guid: 4efb1c610f97f4756b6ede5f6b64491d, type: 3}
   initialDot: {fileID: 454272939}
   DotCount: 300
@@ -957,7 +957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1185534839
 Light:
   m_ObjectHideFlags: 0
@@ -1112,7 +1112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383572524}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.8815727, y: -0.18171799, z: -17.534014}
+  m_LocalPosition: {x: 6.6, y: -1.24, z: -17.534014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

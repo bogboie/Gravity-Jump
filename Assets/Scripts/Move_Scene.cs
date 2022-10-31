@@ -4,23 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Move_Scene : MonoBehaviour
 {
+  private float Start_Time;
   public float LoadTime = 5;
   public GameObject DotMain;
   public GameObject initialDot;
-  public int DotCount;
+  public int DotCount  = 300;
   private GameObject[] LoadingDots ;
   private Vector3[] ScaleChanges;
-  public float Biggest_Size = 1.0f;
-  public float position_difference = 1.2f;
+  public float Biggest_Size = 0.8f;
+  public float position_difference = .006f;
 
 
   void Start()
   {
+    Start_Time = Time.time;
     LoadingDots = new GameObject[DotCount];
     ScaleChanges = new Vector3[DotCount];
     for (int i = 0; i < DotCount; i++)
     {
-      Debug.Log(i);
       LoadingDots[i] = Instantiate(DotMain,initialDot.transform);
       LoadingDots[i].transform.localScale = new Vector3(Biggest_Size,Biggest_Size, Biggest_Size);
       LoadingDots[i].transform.position += new Vector3(0.0f,0.0f,position_difference*i);
@@ -48,8 +49,8 @@ public class Move_Scene : MonoBehaviour
           ScaleChanges[i] = -ScaleChanges[i];
         }
       }
-        if (Time.time > LoadTime) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (Time.time-Start_Time > LoadTime) {
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerMovement : MonoBehaviour
@@ -132,6 +133,10 @@ public class PlayerMovement : MonoBehaviour
             left_button.interactable = false;
             right_button.interactable = false;
         }
+    }
+    public void Next_Level() {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
     private void Update()
     {
