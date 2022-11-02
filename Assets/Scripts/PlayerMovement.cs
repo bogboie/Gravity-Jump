@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 Jump_Button_Pos;
     private Touch touch;
     private GameObject[] objects;
+    public AudioSource audioSource;
 
     private void hide_buttons()
     {
@@ -111,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(0, 2000, 0);
             canJump = false;
+            audioSource.Play();
         }
     }
     private void OnTriggerStay(Collider other)

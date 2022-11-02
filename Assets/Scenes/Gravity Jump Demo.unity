@@ -8021,6 +8021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Period: 10
   delta_Z: 10
+  time: 0
 --- !u!65 &1175187442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11986,6 +11987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Win_Text: {fileID: 44027797}
+  Next_Level_Button: {fileID: 0}
 --- !u!1 &1986466046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d027ad38ea00544e7980e73a0cbeed13, type: 3}
