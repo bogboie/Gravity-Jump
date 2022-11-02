@@ -4274,6 +4274,7 @@ MonoBehaviour:
   starting_pos: {fileID: 72516894}
   gateleft: {fileID: 1060721161}
   gateright: {fileID: 681558276}
+  Jump_Button: {fileID: 870827046}
 --- !u!114 &624689417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5830,8 +5831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd82efe5855234b07bdd27e079e01f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Apple_Rigidbody: {fileID: 624689411}
-  Apple_Script: {fileID: 624689416}
 --- !u!114 &870827049
 MonoBehaviour:
   m_ObjectHideFlags: 0

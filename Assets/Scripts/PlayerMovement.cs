@@ -158,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
             if (touch.phase == UnityEngine.TouchPhase.Began)
             {
                 float dist = Dist(touch.position, Jump_Button_Pos);
-                if (dist > 100)
+                if (dist < 60)
                 {
                     Jump();
                 }
