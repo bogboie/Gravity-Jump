@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     private Touch touch;
     private GameObject[] objects;
     public AudioSource audioSource;
+    public AudioSource pushSource;
+    public AudioSource woodSource;
 
     private void hide_buttons()
     {
@@ -34,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         right_button.transform.localScale = hide_button;
         left_button.interactable = false;
         right_button.interactable = false;
+        pushSource.Play();
     }
     private void show_buttons()
     {
@@ -78,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         ownTransform.position = starting_pos.position;
         hide_buttons();
         Jump_Button_Pos = new Vector2(Jump_Button.position.x, Jump_Button.position.z);
+        woodSource.Play();
     }
 
     private void LateUpdate()
