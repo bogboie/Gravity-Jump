@@ -8,6 +8,7 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject thingy;
     public Button left_button;
     public Button right_button;
     private Rigidbody rb;
@@ -146,6 +147,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (canJump) {
+          thingy.SetActive(false);
+        } else {
+          thingy.SetActive(true);
+        }
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
