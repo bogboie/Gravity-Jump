@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canJump = false;
     private Vector3 cam_offset = new Vector3(10, 0, 0);
     private Vector3 hide_button = new Vector3(0, 1, 1);
-    private Vector3 show_button = new Vector3(1, 1, 1);
+    private Vector3 show_button = new Vector3(0.3f, 0.3f, 0.3f);
     public Transform starting_pos;
     public GameObject gateleft;
     public GameObject gateright;
