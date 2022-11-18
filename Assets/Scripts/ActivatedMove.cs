@@ -7,6 +7,7 @@ public class ActivatedMove : MonoBehaviour
 
     public GameObject Player;
     public Rigidbody Player_Rigidbody;
+    public bool never_stop = false;
     private float zed;
     public float Period = 10;
     public float delta_Z = 10;
@@ -50,7 +51,7 @@ public class ActivatedMove : MonoBehaviour
       }
     }
     private void OnTriggerExit(Collider other) {
-      if (other.gameObject == Player) {
+      if (other.gameObject == Player && !never_stop) {
         touching = false;
         //Player.transform.SetParent(null);
         //Player_Rigidbody.velocity.Set(Player_Rigidbody.velocity.x,Player_Rigidbody.velocity.y,zed);
