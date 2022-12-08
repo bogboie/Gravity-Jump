@@ -8,13 +8,14 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject thingy;
-    public Button left_button;
-    public Button right_button;
+    private GameObject Jump_Button;
+    private Button left_button;
+    private Button right_button;
     private Rigidbody rb;
     public Camera CameraObject;
     private Transform ownTransform;
-    public bool canJump = false;
+    [SerializeField]
+    private bool canJump = false;
     private Vector3 cam_offset = new Vector3(10, 0, 0);
     private Vector3 hide_button = new Vector3(0, 1, 1);
     private Vector3 show_button = new Vector3(0.3f, 0.3f, 0.3f);
@@ -23,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject gateright;
     private Collider gateColliderleft;
     private Collider gateColliderright;
-    public Transform Jump_Button;
     private Vector2 Jump_Button_Pos;
     private Touch touch;
     private GameObject[] objects;
@@ -74,14 +74,18 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objects = GameObject.FindGameObjectsWithTag("Activated Platform");
-        gateColliderleft = gateleft.GetComponent<BoxCollider>();
-        gateColliderright = gateright.GetComponent<BoxCollider>();
-        rb = GetComponent<Rigidbody>();
-        ownTransform = GetComponent<Transform>();
-        ownTransform.position = starting_pos.position;
+        //get the following objects to be able to reference later in game
+        Jump_Button =  GameObject.Find("Canvas 1/Thy Jump Squisher Dos!"); // The Jump Button
+        left_button  = GameObject.Find("Canvas 1/Left"); // The Push Left Button
+        right_button = GameObject.Find("Canvas 1/Right"); // The Push Right Button
+        objects = GameObject.FindGameObjectsWithTag("Activated Platform"); // All Trigger Activated Moving Platforms
+        gateColliderleft = gateleft.GetComponent<BoxCollider>(); // The Left Gate Collider
+        gateColliderright = gateright.GetComponent<BoxCollider>(); // The Right Gate Collider
+        rb = GetComponent<Rigidbody>(); // Its own Rigidbody
+        ownTransform = GetComponent<Transform>(); // Its own Transform
+        ownTransform.position = starting_pos.position; // Its own Starting Position
         hide_buttons();
-        Jump_Button_Pos = new Vector2(Jump_Button.position.x, Jump_Button.position.z);
+        Jump_Button_Pos = new Vector2(Jump_Button.transform.position.x, Jump_Button.transform.position.z);
         woodSource.Play();
     }
 
@@ -148,9 +152,9 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (canJump) {
-          thingy.SetActive(false);
+          Jump_Button.SetActive(false);
         } else {
-          thingy.SetActive(true);
+          Jump_Button.SetActive(true);
         }
         if (Input.touchCount > 0)
         {
