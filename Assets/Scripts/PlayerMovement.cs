@@ -9,8 +9,10 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     private GameObject Jump_Button;
-    private Button left_button;
-    private Button right_button;
+    private GameObject left_button;
+    private GameObject right_button;
+    private Button left;
+    private Button right;
     private Rigidbody rb;
     public Camera CameraObject;
     private Transform ownTransform;
@@ -35,16 +37,16 @@ public class PlayerMovement : MonoBehaviour
     {
         left_button.transform.localScale = hide_button;
         right_button.transform.localScale = hide_button;
-        left_button.interactable = false;
-        right_button.interactable = false;
+        left.interactable = false;
+        right.interactable = false;
         pushSource.Play();
     }
     private void show_buttons()
     {
         left_button.transform.localScale = show_button;
         right_button.transform.localScale = show_button;
-        left_button.interactable = true;
-        right_button.interactable = true;
+        left.interactable = true;
+        right.interactable = true;
     }
     public void push_left()
     {
@@ -75,9 +77,12 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //get the following objects to be able to reference later in game
-        Jump_Button =  GameObject.Find("Canvas 1/Thy Jump Squisher Dos!"); // The Jump Button
-        left_button  = GameObject.Find("Canvas 1/Left"); // The Push Left Button
-        right_button = GameObject.Find("Canvas 1/Right"); // The Push Right Button
+        Jump_Button =  GameObject.Find("Thy Jump Squisher Dos!"); // The Jump Button
+
+        left_button  = GameObject.Find("Left"); // The Push Left Button
+        right_button = GameObject.Find("Right"); // The Push Right Button
+        left = left_button.GetComponent<Button>();
+        right = right_button.GetComponent<Button>();
         objects = GameObject.FindGameObjectsWithTag("Activated Platform"); // All Trigger Activated Moving Platforms
         gateColliderleft = gateleft.GetComponent<BoxCollider>(); // The Left Gate Collider
         gateColliderright = gateright.GetComponent<BoxCollider>(); // The Right Gate Collider
@@ -91,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        CameraObject.transform.position = ownTransform.position + cam_offset;
+        CameraObject.transform.position = this.transform.position + cam_offset;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -141,8 +146,8 @@ public class PlayerMovement : MonoBehaviour
         {
             left_button.transform.localScale = hide_button;
             right_button.transform.localScale = hide_button;
-            left_button.interactable = false;
-            right_button.interactable = false;
+            left.interactable = false;
+            right.interactable = false;
         }
     }
     public void Next_Level() {

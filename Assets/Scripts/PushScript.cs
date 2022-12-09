@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PushScript : MonoBehaviour
 {
     public Button otherButton;
-    
+    /*
     private Vector3 show_scale;
     // Start is called before the first frame update
 
@@ -32,5 +32,5 @@ public class PushScript : MonoBehaviour
    public void _Show() {
      this.transform.localScale = show_scale;
      this.interactable = true;
-   }
+   }*/
 }
