@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private GameObject Jump_Button;
     private GameObject left_button;
     private GameObject right_button;
+    private GameObject Down;
     private Button left;
     private Button right;
     private Rigidbody rb;
@@ -83,10 +84,11 @@ public class PlayerMovement : MonoBehaviour
         right_button = GameObject.Find("Right"); // The Push Right Button
         left = left_button.GetComponent<Button>();
         right = right_button.GetComponent<Button>();
+        Down = Jump_Button.transform.GetChild(0).gameObject;
         objects = GameObject.FindGameObjectsWithTag("Activated Platform"); // All Trigger Activated Moving Platforms
         gateColliderleft = gateleft.GetComponent<BoxCollider>(); // The Left Gate Collider
         gateColliderright = gateright.GetComponent<BoxCollider>(); // The Right Gate Collider
-        rb = GetComponent<Rigidbody>(); // Its own Rigidbody
+        rb = this.GetComponent<Rigidbody>(); // Its own Rigidbody
         ownTransform = GetComponent<Transform>(); // Its own Transform
         ownTransform.position = starting_pos.position; // Its own Starting Position
         hide_buttons();
@@ -157,9 +159,9 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (canJump) {
-          Jump_Button.SetActive(false);
+          Down.SetActive(false);
         } else {
-          Jump_Button.SetActive(true);
+          Down.SetActive(true);
         }
         if (Input.touchCount > 0)
         {

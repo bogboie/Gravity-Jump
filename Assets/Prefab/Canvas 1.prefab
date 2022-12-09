@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -215, y: -66}
+  m_AnchoredPosition: {x: -224, y: -66}
   m_SizeDelta: {x: 349, y: 347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3906081120965695257
@@ -267,7 +267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.1, y: -92.3}
+  m_AnchoredPosition: {x: 14.6, y: -56.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3906081121057259944
@@ -560,6 +560,7 @@ GameObject:
   - component: {fileID: 3906081121707893015}
   - component: {fileID: 3906081121707893012}
   - component: {fileID: 3906081121707893013}
+  - component: {fileID: 5720630400408452771}
   m_Layer: 5
   m_Name: Thy Jump Squisher Dos!
   m_TagString: Untagged
@@ -790,6 +791,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5720630400408452771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3906081121707892973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da728dcd1006942ecb69490261b790d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3906081122566114461
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 246, y: -61.1}
+  m_AnchoredPosition: {x: 239, y: -61.1}
   m_SizeDelta: {x: 361, y: 347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3906081122578216413
@@ -1190,7 +1203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.0841, y: -40.3963}
+  m_AnchoredPosition: {x: 19.584093, y: -4.8962975}
   m_SizeDelta: {x: 240.8757, y: 143.8629}
   m_Pivot: {x: 0.5317435, y: 0.54542685}
 --- !u!222 &3906081122843433348
