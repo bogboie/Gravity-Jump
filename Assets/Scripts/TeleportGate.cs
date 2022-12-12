@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TeleportGate : MonoBehaviour
 {
-    public GameObject Player;
+    [SerializeField]
+    private GameObject Player;
     public GameObject other_Gate;
     private TeleportGate other_Gate_Script;
     private Transform Player_Transform;
@@ -13,6 +14,7 @@ public class TeleportGate : MonoBehaviour
 
     private void Awake()
     {
+        Player = GameObject.Find("Apple");
         Player_Transform = Player.GetComponent<Transform>();
         other_Gate_Script = other_Gate.GetComponent<TeleportGate>();
 
@@ -29,4 +31,3 @@ public class TeleportGate : MonoBehaviour
         }
     }
 }
-

@@ -22,15 +22,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 cam_offset = new Vector3(10, 0, 0);
     private Vector3 hide_button = new Vector3(0, 1, 1);
     private Vector3 show_button = new Vector3(0.3f, 0.3f, 0.3f);
-    public Transform starting_pos;
-    public GameObject gateleft;
-    public GameObject gateright;
+    private Transform starting_pos;
+    private GameObject gateleft;
+    private GameObject gateright;
     private Collider gateColliderleft;
     private Collider gateColliderright;
     private Vector2 Jump_Button_Pos;
     private Touch touch;
     private GameObject[] objects;
-    public AudioSource audioSource;
+    public AudioSource JumpAudio;
     public AudioSource pushSource;
     public AudioSource woodSource;
 
@@ -79,12 +79,14 @@ public class PlayerMovement : MonoBehaviour
     {
         //get the following objects to be able to reference later in game
         Jump_Button =  GameObject.Find("Thy Jump Squisher Dos!"); // The Jump Button
-
+        starting_pos = GameObject.Find("Starting position").transform;
         left_button  = GameObject.Find("Left"); // The Push Left Button
         right_button = GameObject.Find("Right"); // The Push Right Button
         left = left_button.GetComponent<Button>();
         right = right_button.GetComponent<Button>();
         Down = Jump_Button.transform.GetChild(0).gameObject;
+        gateleft = GameObject.Find("Left Gate Activator");
+        gateright = GameObject.Find("Right Gate Activator");
         objects = GameObject.FindGameObjectsWithTag("Activated Platform"); // All Trigger Activated Moving Platforms
         gateColliderleft = gateleft.GetComponent<BoxCollider>(); // The Left Gate Collider
         gateColliderright = gateright.GetComponent<BoxCollider>(); // The Right Gate Collider
@@ -128,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(0, 2000, 0);
             canJump = false;
-            audioSource.Play();
+            JumpAudio.Play();
         }
     }
     private void OnTriggerStay(Collider other)
