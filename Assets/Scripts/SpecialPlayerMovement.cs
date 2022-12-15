@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class PlayerMovement : MonoBehaviour
+public class SpecialPlayerMovement : MonoBehaviour
 {
     private GameObject Jump_Button;
     private GameObject left_button;
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         right_button.transform.localScale = hide_button;
         left.interactable = false;
         right.interactable = false;
-        //pushSource.Play();
+        pushSource.Play();
     }
     private void show_buttons()
     {
@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
         ownTransform.position = starting_pos.position; // Its own Starting Position
         hide_buttons();
         Jump_Button_Pos = new Vector2(Jump_Button.transform.position.x, Jump_Button.transform.position.z);
-        //woodSource.Play();
+        woodSource.Play();
     }
 
     private void LateUpdate()
@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(0, 2000, 0);
             canJump = false;
-            //JumpAudio.Play();
+            JumpAudio.Play();
         }
     }
     private void OnTriggerStay(Collider other)

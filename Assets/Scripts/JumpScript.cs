@@ -9,7 +9,7 @@ public class JumpScript : MonoBehaviour
     private Vector2 screen_pos;
 
     // Start is called before the first frame update
-    void Start()
+/*    void Start()
     {
     player = GameObject.Find("Apple");
     playerScript = player.GetComponent<PlayerMovement>();
@@ -37,4 +37,5 @@ public class JumpScript : MonoBehaviour
           }
       }
     }
+*/
 }

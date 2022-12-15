@@ -16240,11 +16240,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124866000}
   m_CullTransparentMesh: 1
---- !u!82 &1171603735 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6147603179634146052, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
-  m_PrefabInstance: {fileID: 6147603180670876179}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1171603736
 Transform:
   m_ObjectHideFlags: 0
@@ -24789,12 +24784,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6419eb9907b1b4f2b8c0a8daf8e9764b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   CameraObject: {fileID: 594623030}
   canJump: 0
-  starting_pos: {fileID: 965660778}
-  gateleft: {fileID: 763086209}
-  gateright: {fileID: 1640583921}
-  audioSource: {fileID: 1171603735}
+  JumpAudio: {fileID: 0}
   pushSource: {fileID: 125563801}
   woodSource: {fileID: 1661278993}
 --- !u!114 &1661278987

@@ -15355,8 +15355,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: push_right
       objectReference: {fileID: 0}
+    - target: {fileID: 3906081122843433345, guid: a113be203306c4601b664ebcd3dc4c43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a113be203306c4601b664ebcd3dc4c43, type: 3}
+--- !u!114 &732276097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3906081121057259946, guid: a113be203306c4601b664ebcd3dc4c43, type: 3}
+  m_PrefabInstance: {fileID: 732276096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &732276098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3906081122843433351, guid: a113be203306c4601b664ebcd3dc4c43, type: 3}
+  m_PrefabInstance: {fileID: 732276096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &733444279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40945,8 +40971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c24a6f3276af45cfbf2c84298ad776b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Win_Text: {fileID: 0}
-  Next_Level_Button: {fileID: 0}
+  Win_Text: {fileID: 732276098}
+  Next_Level_Button: {fileID: 732276097}
 --- !u!1001 &1991123067
 PrefabInstance:
   m_ObjectHideFlags: 0
