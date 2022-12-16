@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         objects = GameObject.FindGameObjectsWithTag("Activated Platform"); // All Trigger Activated Moving Platforms
         gateColliderleft = gateleft.GetComponent<BoxCollider>(); // The Left Gate Collider
         gateColliderright = gateright.GetComponent<BoxCollider>(); // The Right Gate Collider
-        //rb = GetComponent<Rigidbody>(); // Its own Rigidbody
+        rb = GetComponent<Rigidbody>(); // Its own Rigidbody
         ownTransform = GetComponent<Transform>(); // Its own Transform
         ownTransform.position = starting_pos.position; // Its own Starting Position
         hide_buttons();

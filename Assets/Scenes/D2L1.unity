@@ -7014,7 +7014,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -15811,12 +15811,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6419eb9907b1b4f2b8c0a8daf8e9764b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   CameraObject: {fileID: 1092279922}
   canJump: 0
-  starting_pos: {fileID: 72516894}
-  gateleft: {fileID: 1060721161}
-  gateright: {fileID: 681558276}
-  audioSource: {fileID: 1819843565}
+  JumpAudio: {fileID: 0}
   pushSource: {fileID: 1936441612}
   woodSource: {fileID: 624689418}
 --- !u!114 &624689417
@@ -17541,7 +17539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 624689410}
   other_Gate: {fileID: 1060721161}
   Gate_Locked: 0
 --- !u!1001 &684615934
@@ -26000,7 +25997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 624689410}
   other_Gate: {fileID: 681558276}
   Gate_Locked: 0
 --- !u!1 &1060776021
@@ -43680,7 +43676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a342e20f3a4394d7097141469e1d9867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player_Script: {fileID: 624689416}
 --- !u!61 &1819843563
 BoxCollider2D:
   m_ObjectHideFlags: 0
