@@ -117,6 +117,18 @@ public class PlayerMovement : MonoBehaviour
         else if (other.gameObject.tag == "Choice")
         {
             show_buttons();
+        } else if (other.gameObject.tag == "Enemy") {
+          // then check if the angle between their centers is low enough to kill the Player
+          // get enemy Position
+          Vector3 enemyPos = other.transform.position;
+          Vector2 line = new Vector2(enemyPos.z-transform.position.z,enemyPos.y-transform.position.y);
+          double slope = Mathf.Abs(line.y/line.x);
+          if (slope > 2) { // means that we jumped on "top" of the enemy so we dont die !! (yay)
+        } else { // means that we are gunna die
+              kill_player(); //L
+              print('L');
+          }
+
         }
     }
     private float Dist(Vector2 A, Vector2 B)

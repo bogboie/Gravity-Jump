@@ -12,8 +12,13 @@ public class PatrolingEnemy : MonoBehaviour
     private float StartingXPos;
     private Rigidbody rb;
 
+    public void kms() {
+      gameObject.SetActive(false);
+    }
+
     void Start()
     {
+        gameObject.SetActive(true);
         TwoFzero = 2 * Fzero;
         StartingXPos = transform.position.z;
         rb = GetComponent<Rigidbody>();
@@ -36,6 +41,22 @@ public class PatrolingEnemy : MonoBehaviour
     {
       if (abs(transform.position.z - StartingXPos) >= Threshold) {
         SwitchDirection();
+      }
+
+    }
+
+    void OnTriggerEnter(Collider other) {
+      if (other.gameObject.tag == "Player") {// check if we should either kill player or die
+        // then check if the angle between their centers is low enough to kill the Player
+        // get enemy Position
+        Vector3 playerPos = other.transform.position;
+        Vector2 line = new Vector2(transform.position.z-playerPos.z,transform.position.y-playerPos.y);
+        double slope = Mathf.Abs(line.y/line.x);
+        print(slope);
+        if (slope > 1) { // means that the player jumped on "top" of us(enemy) and we are gunnna dy
+          kms();
+      } else { // means that the player is gunna die HEHEHEHAW
+        }
       }
     }
 }
