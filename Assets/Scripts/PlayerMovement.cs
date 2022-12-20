@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource JumpAudio;
     public AudioSource pushSource;
     public AudioSource woodSource;
+    private SpecialEnemy[] s_enemies;
 
     private void hide_buttons()
     {
@@ -72,6 +73,9 @@ public class PlayerMovement : MonoBehaviour
           ActivatedMove script = obj.GetComponent<ActivatedMove>();
           script.Reset();
         }
+        foreach(SpecialEnemy script in s_enemies) {
+          script.Reset();
+        }
 
     }
 
@@ -89,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
         gateleft = GameObject.Find("Left Gate Activator");
         gateright = GameObject.Find("Right Gate Activator");
         objects = GameObject.FindGameObjectsWithTag("Activated Platform"); // All Trigger Activated Moving Platforms
+        s_enemies = FindObjectsOfType(typeof(SpecialEnemy)) as SpecialEnemy[];
         gateColliderleft = gateleft.GetComponent<BoxCollider>(); // The Left Gate Collider
         gateColliderright = gateright.GetComponent<BoxCollider>(); // The Right Gate Collider
         rb = GetComponent<Rigidbody>(); // Its own Rigidbody
