@@ -49,7 +49,13 @@ public class SpecialEnemy : MonoBehaviour
         // get enemy Position
         Vector3 playerPos = other.transform.position;
         Vector2 line = new Vector2(transform.position.z-playerPos.z,transform.position.y-playerPos.y);
+        if (line.y > 0) {
+          // we are abote the player  
+          // so we do not die no matter what and dont need to calculate the slope
+          return;
+        }
         double slope = Mathf.Abs(line.y/line.x);
+
         print(slope);
         if (slope > 1) { // means that the player jumped on "top" of us(enemy) and we are gunnna dy
           kms();

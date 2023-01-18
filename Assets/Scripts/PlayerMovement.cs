@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource pushSource;
     public AudioSource woodSource;
     private SpecialEnemy[] s_enemies;
+    public delegate void PlayerRespawn();
+    public static event PlayerRespawn OnRespawn;
 
     private void hide_buttons()
     {
@@ -76,7 +78,8 @@ public class PlayerMovement : MonoBehaviour
         foreach(SpecialEnemy script in s_enemies) {
           script.Reset();
         }
-
+        if (OnRespawn != null)
+            OnRespawn();
     }
 
     // Start is called before the first frame update
@@ -127,8 +130,13 @@ public class PlayerMovement : MonoBehaviour
           // get enemy Position
           Vector3 enemyPos = other.transform.position;
           Vector2 line = new Vector2(enemyPos.z-transform.position.z,enemyPos.y-transform.position.y);
+          if (line.y < 0) {
+            // we are underneef the player therfore we gotta dye
+            kill_player();
+            print('L');
+          }
           double slope = Mathf.Abs(line.y/line.x);
-          if (slope > 2) { // means that we jumped on "top" of the enemy so we dont die !! (yay)
+          if (slope > 1) { // means that we jumped on "top" of the enemy so we dont die !! (yay)
         } else { // means that we are gunna die
               kill_player(); //L
               print('L');
