@@ -10,7 +10,8 @@ public class SpecialEnemy : MonoBehaviour
     private double dist_to_player;
     private Rigidbody rb;
     private Vector3 Starting_pos;
-
+    [SerializeField]
+    private double maxvelocity;
 
     public void Reset() {
       // go back to starting_pos
@@ -26,6 +27,8 @@ public class SpecialEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EventManager.OnRespawn += respawn;
+
         Starting_pos = transform.position;
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player");
@@ -34,12 +37,16 @@ public class SpecialEnemy : MonoBehaviour
       if (player.transform.position.z < transform.position.z) {
          //go to the left
 
-         rb.AddForce(0,0,-1);
+
+        if (rb.velocity.z > -maxvelocity) {
+           rb.AddForce(0,0,-1);
+        }
       } else if (player.transform.position.z > transform.position.z) {
         //go to the right
+        if (rb.velocity.z < maxvelocity) {
 
         rb.AddForce(0,0,1);
-
+        }
       }
     }
 
@@ -50,7 +57,7 @@ public class SpecialEnemy : MonoBehaviour
         Vector3 playerPos = other.transform.position;
         Vector2 line = new Vector2(transform.position.z-playerPos.z,transform.position.y-playerPos.y);
         if (line.y > 0) {
-          // we are abote the player  
+          // we are abote the player
           // so we do not die no matter what and dont need to calculate the slope
           return;
         }

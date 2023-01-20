@@ -11,6 +11,7 @@ public class PatrolingEnemy : MonoBehaviour
     [SerializeField]
     private float StartingXPos;
     private Rigidbody rb;
+    private Vector3 OG_Place;
 
     public void kms() {
       gameObject.SetActive(false);
@@ -18,6 +19,7 @@ public class PatrolingEnemy : MonoBehaviour
 
     void Start()
     {
+      OG_Place = transform.position;
         gameObject.SetActive(true);
         TwoFzero = 2 * Fzero;
         StartingXPos = transform.position.z;
@@ -35,6 +37,15 @@ public class PatrolingEnemy : MonoBehaviour
         return x;
       }
     }
+
+
+    void respawn() {
+      transform.position = OG_Place;
+      rb.velocity = Vector3.zero;
+      gameObject.SetActive(true);
+    }
+
+
 
     // Update is called once per frame
     void Update()

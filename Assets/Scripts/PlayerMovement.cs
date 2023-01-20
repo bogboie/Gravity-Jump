@@ -130,16 +130,17 @@ public class PlayerMovement : MonoBehaviour
           // get enemy Position
           Vector3 enemyPos = other.transform.position;
           Vector2 line = new Vector2(enemyPos.z-transform.position.z,enemyPos.y-transform.position.y);
-          if (line.y < 0) {
-            // we are underneef the player therfore we gotta dye
+          if (line.y > 0) {
+            // we are underneef the enemy therfore we gotta dye
             kill_player();
-            print('L');
+            print("YOU DIED CAUSE YOUR BAD AND WERE SOMEHOW UNDER THE ENEMY");
           }
           double slope = Mathf.Abs(line.y/line.x);
           if (slope > 1) { // means that we jumped on "top" of the enemy so we dont die !! (yay)
         } else { // means that we are gunna die
               kill_player(); //L
-              print('L');
+              string mystr = "YOU DIED CAUSE YOU BAD AND THE SLOPE WAS" + slope + ".HEHEHEHAW";
+              print(mystr);
           }
 
         }
