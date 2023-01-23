@@ -35,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource pushSource;
     public AudioSource woodSource;
     private SpecialEnemy[] s_enemies;
-    public delegate void PlayerRespawn();
-    public static event PlayerRespawn OnRespawn;
 
     private void hide_buttons()
     {
@@ -77,9 +75,10 @@ public class PlayerMovement : MonoBehaviour
         }
         foreach(SpecialEnemy script in s_enemies) {
           script.Reset();
+
         }
-        if (OnRespawn != null)
-            OnRespawn();
+        EventManager.CallRespawn();
+
     }
 
     // Start is called before the first frame update

@@ -19,15 +19,17 @@ public class SpecialEnemy : MonoBehaviour
       // stop Moving
       rb.velocity = Vector3.zero;
       rb.angularVelocity = Vector3.zero;
+      gameObject.SetActive(true);
     }
 
     public void kms() {
       gameObject.SetActive(false);
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.OnRespawn += respawn;
+        EventManager.OnRespawn += Reset;
 
         Starting_pos = transform.position;
         rb = GetComponent<Rigidbody>();
