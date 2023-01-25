@@ -9,6 +9,22 @@ public class MovingSpike : MonoBehaviour
   private Transform ownTransform;
   private float starting_Y;
     // Start is called before the first frame update
+    private void reset()
+    {
+
+        transform.position = ownTransform.position;
+    }
+    private void kill()
+    {
+        EventManager.OnRespawn -= reset;
+        EventManager.OnSceneClose -= kill;
+        
+    }
+    private void Awake()
+    {
+        EventManager.OnRespawn += reset;
+        EventManager.OnSceneClose += kill;
+    }
     void Start()
     {
       ownTransform = this.transform;

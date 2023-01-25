@@ -26,10 +26,21 @@ public class SpecialEnemy : MonoBehaviour
       gameObject.SetActive(false);
     }
 
+    private void kill()
+    {
+        EventManager.OnRespawn -= Reset;
+        EventManager.OnSceneClose -= kill;
+    }
+    public void Awake()
+    {
+        EventManager.OnRespawn += Reset;
+        EventManager.OnSceneClose += kill;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.OnRespawn += Reset;
 
         Starting_pos = transform.position;
         rb = GetComponent<Rigidbody>();

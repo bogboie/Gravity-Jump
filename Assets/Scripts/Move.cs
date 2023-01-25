@@ -10,7 +10,22 @@ public class Move : MonoBehaviour
     private float Start_Z;
     public float time = 0;
     private const float Two_Pi = 2 * Mathf.PI;
-    
+    private void kill()
+    {
+        EventManager.OnRespawn -= reset;
+        EventManager.OnSceneClose -= kill;
+    }
+    private void reset()
+    {
+        Start_Pos.z = Start_Z;
+        transform.position = Start_Pos;
+        
+    }
+    void Awake()
+    {
+        EventManager.OnRespawn += reset;
+        EventManager.OnSceneClose += kill;
+    }
     // Start is called before the first frame update
     void Start()
     {

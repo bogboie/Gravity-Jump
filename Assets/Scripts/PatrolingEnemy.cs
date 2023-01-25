@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PatrolingEnemy : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,6 +16,17 @@ public class PatrolingEnemy : MonoBehaviour
 
     public void kms() {
       gameObject.SetActive(false);
+    }
+    private void kill()
+    {
+        EventManager.OnRespawn -= respawn;
+        EventManager.OnSceneClose -= kill;
+    }
+
+    private void Awake()
+    {
+        EventManager.OnRespawn += respawn;
+        EventManager.OnSceneClose += kill;
     }
 
     void Start()
@@ -40,8 +52,8 @@ public class PatrolingEnemy : MonoBehaviour
 
 
     void respawn() {
-      transform.position = OG_Place;
-      rb.velocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
+        transform.position = OG_Place;
       gameObject.SetActive(true);
     }
 

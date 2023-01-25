@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class ActivatedMove : MonoBehaviour
 {
-
-    public GameObject Player;
-    public Rigidbody Player_Rigidbody;
     public bool never_stop = false;
-    private float zed;
     public float Period = 10;
     public float delta_Z = 10;
     private Vector3 Start_Pos;
     private float Start_Z;
     public float time = 0;
     private float passed_time;
-    private bool touched;
     private const float Two_Pi = 2 * Mathf.PI;
     private bool touching;
     // Start is called before the first frame update
+    private void kill()
+    {
+        EventManager.OnRespawn -= Reset;
+        EventManager.OnSceneClose -= kill;
+    }
     private void Awake()
     {
         EventManager.OnRespawn += Reset;
+        EventManager.OnSceneClose += kill;
     }
     void Start()
     {
-        Start_Pos = this.transform.position;
+        touching = false;
+        Start_Pos = transform.position;
         Start_Z = Start_Pos.z;
     }
 
@@ -41,24 +43,19 @@ public class ActivatedMove : MonoBehaviour
 
     }
 
-    public void Reset()
+    private void Reset()
     {
         touching = false;
         passed_time = 0;
     }
     private void OnTriggerEnter(Collider other) {
-      if (other.gameObject == Player) {
+      if (other.gameObject.tag == "Player") {
         touching = true;
-        //zed = Player_Rigidbody.velocity.z;
-        //Player_Rigidbody.velocity = Vector3.zero;
-        //Player.transform.SetParent(transform);
       }
     }
     private void OnTriggerExit(Collider other) {
-      if (other.gameObject == Player && !never_stop) {
+      if (other.gameObject.tag == "Player" && !never_stop) {
         touching = false;
-        //Player.transform.SetParent(null);
-        //Player_Rigidbody.velocity.Set(Player_Rigidbody.velocity.x,Player_Rigidbody.velocity.y,zed);
       }
     }
 }
