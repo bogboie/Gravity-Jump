@@ -19,6 +19,10 @@ public class ActivatedMove : MonoBehaviour
     private const float Two_Pi = 2 * Mathf.PI;
     private bool touching;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        EventManager.OnRespawn += Reset;
+    }
     void Start()
     {
         Start_Pos = this.transform.position;

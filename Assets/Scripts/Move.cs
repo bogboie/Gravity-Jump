@@ -22,7 +22,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Start_Pos.z = Start_Z + delta_Z * Mathf.Sin(Two_Pi * Time.time / Period);
+        Start_Pos.z = Start_Z + delta_Z * Mathf.Sin(Two_Pi * (Time.time + time)/ Period);
         this.transform.position = Start_Pos;
 
        

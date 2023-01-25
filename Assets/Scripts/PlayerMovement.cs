@@ -69,14 +69,7 @@ public class PlayerMovement : MonoBehaviour
         gateColliderleft.enabled = true;
         gateColliderright.enabled = true;
 
-        foreach (GameObject obj in objects) {
-          ActivatedMove script = obj.GetComponent<ActivatedMove>();
-          script.Reset();
-        }
-        foreach(SpecialEnemy script in s_enemies) {
-          script.Reset();
 
-        }
         EventManager.CallRespawn();
 
     }
