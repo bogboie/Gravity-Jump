@@ -14408,7 +14408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   other_Gate: {fileID: 1060721161}
   Gate_Locked: 0
 --- !u!1001 &684615934
@@ -21322,7 +21321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e14e8f174970496ba4b677497791c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   other_Gate: {fileID: 681558276}
   Gate_Locked: 0
 --- !u!1001 &1062072037
@@ -29050,6 +29048,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1705576111819971408, guid: b32fd006f5e24441ea59a1a608ad9235, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -45.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705576111819971408, guid: b32fd006f5e24441ea59a1a608ad9235, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 58.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1752429258325839411, guid: b32fd006f5e24441ea59a1a608ad9235, type: 3}
       propertyPath: m_RootOrder
       value: 13
