@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource pushSource;
     public AudioSource woodSource;
     private SpecialEnemy[] s_enemies;
+    private AudioFX JumpSound;
 
     private void hide_buttons()
     {

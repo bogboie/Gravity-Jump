@@ -234,12 +234,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e305ba48b0d418bad144e7c22ed5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadTime: 7.43
+  LoadTime: 8
   DotMain: {fileID: 1980477730373865022, guid: 4efb1c610f97f4756b6ede5f6b64491d, type: 3}
   initialDot: {fileID: 454272939}
-  DotCount: 300
+  DotCount: 29
   Biggest_Size: 0.8
-  position_difference: 0.06
+  position_difference: 1.1
 --- !u!1 &168527957
 GameObject:
   m_ObjectHideFlags: 0
