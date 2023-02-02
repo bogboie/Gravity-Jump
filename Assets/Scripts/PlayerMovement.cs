@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         right_button.transform.localScale = hide_button;
         left.interactable = false;
         right.interactable = false;
-        //pushSource.Play();
+        pushSource.Play();
     }
     private void show_buttons()
     {
