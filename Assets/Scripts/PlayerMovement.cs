@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     private GameObject Down;
     private Button left;
     private Button right;
-    [SerializeField]
     private Rigidbody rb;
     public Camera CameraObject;
     private Transform ownTransform;
@@ -118,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
         else if (other.gameObject.tag == "Choice")
         {
             show_buttons();
+              rb.velocity = new Vector3(rb.velocity.x,rb.velocity.y,0);
+              rb.angularVelocity = Vector3.zero;
         } else if (other.gameObject.tag == "Enemy") {
           // then check if the angle between their centers is low enough to kill the Player
           // get enemy Position
@@ -141,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
     private float Dist(Vector2 A, Vector2 B)
     {
         Vector2 C = A - B;
-       
+
         return Mathf.Sqrt(C.x * C.x + C.y * C.y);
     }
 

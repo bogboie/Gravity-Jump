@@ -5,7 +5,14 @@ using UnityEngine;
 
 public class PatrolingEnemy : MonoBehaviour
 {
+
+enum Direction
+{
+  Left, Right
+}
+
     // Start is called before the first frame update
+    [SerializeField] private Direction direction = Direction.Right;
     public int Fzero = 0;
     public int Threshold;
     private int TwoFzero;
@@ -49,12 +56,17 @@ public class PatrolingEnemy : MonoBehaviour
         return x;
       }
     }
-
+    private void ResetVelocity() {
+      rb.velocity = Vector3.zero;
+      rb.angularVelocity = Vector3.zero;
+    }
 
     void respawn() {
         rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         transform.position = OG_Place;
-      gameObject.SetActive(true);
+        gameObject.SetActive(true);
+        rb.AddForce(0,0,Fzero);
     }
 
 
@@ -62,8 +74,24 @@ public class PatrolingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (abs(transform.position.z - StartingXPos) >= Threshold) {
-        SwitchDirection();
+      if (transform.position.z > StartingXPos + Threshold) {
+        ResetVelocity();
+        direction = Direction.Left;
+      }
+      else if  (transform.position.z < StartingXPos) {
+        ResetVelocity();
+        direction = Direction.Right;
+      }
+      switch (direction) {
+
+        case Direction.Left:
+          rb.velocity = new Vector3(0,0,-1);
+
+
+          break;
+        case Direction.Right:
+          rb.velocity = new Vector3(0,0,1);
+          break;
       }
 
     }
