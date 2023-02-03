@@ -15,6 +15,10 @@ public class AudioFX : MonoBehaviour
     {
         Muted = false;
     }
+    public static void Toggle()
+    {
+        Muted = !Muted;
+    }
 
 
     public static void Play(AudioSource audio)

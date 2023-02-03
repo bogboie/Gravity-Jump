@@ -141,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
     private float Dist(Vector2 A, Vector2 B)
     {
         Vector2 C = A - B;
+       
         return Mathf.Sqrt(C.x * C.x + C.y * C.y);
     }
 
