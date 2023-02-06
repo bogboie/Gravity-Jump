@@ -28,13 +28,11 @@ public class PlayerMovement : MonoBehaviour
     private Collider gateColliderleft;
     private Collider gateColliderright;
     private Vector2 Jump_Button_Pos;
-    private Touch touch;
-    private GameObject[] objects;
+    
+
     public AudioSource JumpAudio;
     public AudioSource pushSource;
     public AudioSource woodSource;
-    private SpecialEnemy[] s_enemies;
-    private AudioFX JumpSound;
 
     private void hide_buttons()
     {
@@ -42,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         right_button.transform.localScale = hide_button;
         left.interactable = false;
         right.interactable = false;
-        pushSource.Play();
+        AudioFX.Play(pushSource);
     }
     private void show_buttons()
     {
@@ -87,8 +85,6 @@ public class PlayerMovement : MonoBehaviour
         Down = Jump_Button.transform.GetChild(0).gameObject;
         gateleft = GameObject.Find("Left Gate Activator");
         gateright = GameObject.Find("Right Gate Activator");
-        objects = GameObject.FindGameObjectsWithTag("Activated Platform"); // All Trigger Activated Moving Platforms
-        s_enemies = FindObjectsOfType(typeof(SpecialEnemy)) as SpecialEnemy[];
         gateColliderleft = gateleft.GetComponent<BoxCollider>(); // The Left Gate Collider
         gateColliderright = gateright.GetComponent<BoxCollider>(); // The Right Gate Collider
         rb = GetComponent<Rigidbody>(); // Its own Rigidbody
@@ -175,10 +171,7 @@ public class PlayerMovement : MonoBehaviour
             right.interactable = false;
         }
     }
-    public void Next_Level() {
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-    }
     private void Update()
     {
         if (canJump) {

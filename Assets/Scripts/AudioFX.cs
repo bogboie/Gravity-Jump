@@ -18,19 +18,18 @@ public class AudioFX : MonoBehaviour
     public static void Toggle()
     {
         Muted = !Muted;
+        print("Audio FX Mute toggled to <" + Muted.ToString() + ">");
     }
 
 
     public static void Play(AudioSource audio)
     {
-        if (Muted) { return; }
         if (audio == null)
         {
-            Console.WriteLine("AUDIOSOURCE IS NULL!!!");
-            
+            print("Audio FX Manager has been given an audio Source which identifies as <null>");   
             return;
         }
-
+        if (Muted) { return; }
         audio.Play();
     }
     

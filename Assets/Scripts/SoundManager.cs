@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        
+        Load();
     }
 
     public void ChangeVolume()

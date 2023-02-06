@@ -16,6 +16,14 @@ public class EventManager : MonoBehaviour
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public static  void GoToStartingScene()
+    {
+        if (OnSceneClose != null)
+        {
+            OnSceneClose();
+        }
+        SceneManager.LoadScene(1);
+    }
     // Start is call
     public static void CallRespawn () {
       if (OnRespawn != null) {
