@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
         if (canJump) {
             rb.AddForce(0, 2000, 0);
             canJump = false;
-            JumpAudio.Play();
+            AudioFX.Play(JumpAudio);
         }
     }
     private void OnTriggerStay(Collider other)
