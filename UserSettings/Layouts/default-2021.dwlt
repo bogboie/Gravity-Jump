@@ -16,6 +16,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
     y: 53
 <<<<<<< refs/remotes/origin/PROD
     width: 2560
@@ -25,10 +26,17 @@ MonoBehaviour:
   m_RootView: {fileID: 6}
 =======
 =======
+=======
+>>>>>>> C# is just Microsoft Java
     y: 24
 >>>>>>> main menu page
     width: 2240
     height: 1236
+=======
+    y: 53
+    width: 2240
+    height: 1119
+>>>>>>> C# is just Microsoft Java
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 2}
@@ -70,7 +78,11 @@ MonoBehaviour:
 =======
     y: 0
     width: 2240
+<<<<<<< refs/remotes/origin/PROD
     height: 1236
+=======
+    height: 1119
+>>>>>>> C# is just Microsoft Java
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -140,6 +152,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
     y: 0
     width: 484
     height: 742
@@ -155,6 +168,12 @@ MonoBehaviour:
 =======
     y: 1216
 >>>>>>> main menu page
+=======
+    y: 1216
+=======
+    y: 1099
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
     width: 2240
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -200,6 +219,7 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 2240
+<<<<<<< refs/remotes/origin/PROD
     height: 1186
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
@@ -209,7 +229,17 @@ MonoBehaviour:
 >>>>>>> C# is just Microsoft Java
 =======
   controlID: 69
+<<<<<<< refs/remotes/origin/PROD
 >>>>>>> main menu page
+=======
+=======
+    height: 1069
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 6218
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,6 +274,7 @@ MonoBehaviour:
   m_BottomViewHeight: 20
 =======
     width: 1708
+<<<<<<< refs/remotes/origin/PROD
     height: 1186
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
@@ -253,7 +284,17 @@ MonoBehaviour:
 >>>>>>> C# is just Microsoft Java
 =======
   controlID: 70
+<<<<<<< refs/remotes/origin/PROD
 >>>>>>> main menu page
+=======
+=======
+    height: 1069
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 6219
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -288,6 +329,7 @@ MonoBehaviour:
   m_LastLoadedLayoutName: 
 =======
     width: 1708
+<<<<<<< refs/remotes/origin/PROD
     height: 693.5
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
@@ -297,7 +339,17 @@ MonoBehaviour:
 >>>>>>> C# is just Microsoft Java
 =======
   controlID: 71
+<<<<<<< refs/remotes/origin/PROD
 >>>>>>> main menu page
+=======
+=======
+    height: 625
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 6220
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,9 +379,15 @@ MonoBehaviour:
 =======
     y: 0
     width: 424
+<<<<<<< refs/remotes/origin/PROD
     height: 693.5
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    height: 625
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> C# is just Microsoft Java
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -371,7 +429,11 @@ MonoBehaviour:
   controlID: 39
 =======
     width: 1284
+<<<<<<< refs/remotes/origin/PROD
     height: 693.5
+=======
+    height: 625
+>>>>>>> C# is just Microsoft Java
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
@@ -409,12 +471,17 @@ MonoBehaviour:
   controlID: 40
 =======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< refs/remotes/origin/PROD
   m_Name: ProjectBrowser
+=======
+  m_Name: ConsoleWindow
+>>>>>>> C# is just Microsoft Java
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< refs/remotes/origin/PROD
     y: 693.5
     width: 1708
     height: 492.5
@@ -431,7 +498,23 @@ MonoBehaviour:
 =======
   m_Selected: 0
   m_LastSelected: 1
+<<<<<<< refs/remotes/origin/PROD
 >>>>>>> main menu page
+=======
+=======
+    y: 625
+    width: 1708
+    height: 444
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 15}
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -463,9 +546,15 @@ MonoBehaviour:
     x: 1708
     y: 0
     width: 532
+<<<<<<< refs/remotes/origin/PROD
     height: 1186
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    height: 1069
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> C# is just Microsoft Java
   m_ActualView: {fileID: 16}
 >>>>>>> C# is just Microsoft Java
   m_Panes:
@@ -493,9 +582,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 424
+<<<<<<< refs/remotes/origin/PROD
     y: 54
     width: 1282
     height: 672.5
+=======
+    y: 83
+    width: 1282
+    height: 604
+>>>>>>> C# is just Microsoft Java
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -697,9 +792,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< refs/remotes/origin/PROD
     m_Target: {x: 2.7403526, y: 36.561867, z: -10.274006}
     speed: 2
     m_Value: {x: 2.7403526, y: 36.561867, z: -10.274006}
+=======
+    m_Target: {x: 776.69366, y: 31.430603, z: 36.318115}
+    speed: 2
+    m_Value: {x: 776.69366, y: 31.430603, z: 36.318115}
+>>>>>>> C# is just Microsoft Java
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -746,6 +847,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< refs/remotes/origin/PROD
     m_Target: {x: -0.21098682, y: 0.76894784, z: -0.3152698, w: -0.51463646}
     speed: 2
     m_Value: {x: -0.21175405, y: 0.768458, z: -0.31641626, w: -0.51430863}
@@ -753,13 +855,27 @@ MonoBehaviour:
     m_Target: 72.862366
     speed: 2
     m_Value: 65.24329
+=======
+    m_Target: {x: -0.14195281, y: -0.03028715, z: 0.004335186, w: -0.98941845}
+    speed: 2
+    m_Value: {x: -0.1478699, y: -0.033225514, z: 0.004960396, w: -0.98843616}
+  m_Size:
+    m_Target: 1273.6521
+    speed: 2
+    m_Value: 1253.3063
+>>>>>>> C# is just Microsoft Java
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
+<<<<<<< refs/remotes/origin/PROD
     m_Speed: 0.001
     m_SpeedNormalized: 0
+=======
+    m_Speed: 2
+    m_SpeedNormalized: 1
+>>>>>>> C# is just Microsoft Java
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -798,15 +914,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< refs/remotes/origin/PROD
     y: 54
     width: 423
     height: 672.5
+=======
+    y: 83
+    width: 423
+    height: 604
+>>>>>>> C# is just Microsoft Java
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< refs/remotes/origin/PROD
       scrollPos: {x: 0, y: 500.5}
       m_SelectedIDs: 4ca80000
       m_LastClickedID: 0
@@ -815,16 +938,33 @@ MonoBehaviour:
         m_UserAcceptedRename: 0
         m_Name: Plane (2)
         m_OriginalName: Plane (2)
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 60a90000
+      m_LastClickedID: 43360
+      m_ExpandedIDs: eab0ffff9abcffffbac1ffff14d0ffff0ee6ffffd4e6ffff64f4ffff2cfbffffca860000dc9e00006cab0000
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+>>>>>>> C# is just Microsoft Java
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
+<<<<<<< refs/remotes/origin/PROD
         m_UserData: 134332
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
+=======
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+>>>>>>> C# is just Microsoft Java
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -857,6 +997,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
     y: 825
     width: 1954
     height: 489
@@ -870,6 +1011,16 @@ MonoBehaviour:
     width: 1707
     height: 471.5
 >>>>>>> main menu page
+=======
+    y: 747.5
+    width: 1707
+    height: 471.5
+=======
+    y: 708
+    width: 1707
+    height: 423
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -887,13 +1038,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< refs/remotes/origin/PROD
     - Assets/Materials
+=======
+    - Assets/Scenes
+>>>>>>> C# is just Microsoft Java
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< refs/remotes/origin/PROD
   - Assets/Materials
+=======
+  - Assets/Scenes
+>>>>>>> C# is just Microsoft Java
   m_LastFoldersGridSize: -1
 <<<<<<< refs/remotes/origin/PROD
   m_LastProjectPath: /Users/studentdsa/Documents/Gravity-Jump
@@ -904,6 +1063,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
     m_SelectedIDs: d6640000
@@ -919,6 +1079,16 @@ MonoBehaviour:
     m_LastClickedID: 28116
     m_ExpandedIDs: 000000000663000000ca9a3b
 >>>>>>> main menu page
+=======
+    m_SelectedIDs: d46d0000
+    m_LastClickedID: 28116
+    m_ExpandedIDs: 000000000663000000ca9a3b
+=======
+    m_SelectedIDs: 3c6e0000
+    m_LastClickedID: 28220
+    m_ExpandedIDs: 00000000fc6d000000ca9a3b
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -952,6 +1122,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
     m_ExpandedIDs: 00000000be640000
 =======
     m_ExpandedIDs: 00000000fc6d000000ca9a3b
@@ -959,6 +1130,12 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 0000000006630000
 >>>>>>> main menu page
+=======
+    m_ExpandedIDs: 0000000006630000
+=======
+    m_ExpandedIDs: 00000000fc6d000000ca9a3b
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -985,8 +1162,15 @@ MonoBehaviour:
   m_ListAreaState:
 <<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
+=======
+>>>>>>> C# is just Microsoft Java
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+=======
+    m_SelectedInstanceIDs: 60a90000
+    m_LastClickedInstanceID: 43360
+>>>>>>> C# is just Microsoft Java
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
 =======
@@ -1105,6 +1289,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
     y: 83
     width: 483
     height: 721
@@ -1118,6 +1303,16 @@ MonoBehaviour:
     width: 1707
     height: 471.5
 >>>>>>> main menu page
+=======
+    y: 747.5
+    width: 1707
+    height: 471.5
+=======
+    y: 708
+    width: 1707
+    height: 423
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1475,9 +1670,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1708
+<<<<<<< refs/remotes/origin/PROD
     y: 54
     width: 531
     height: 1165
+=======
+    y: 83
+    width: 531
+    height: 1048
+>>>>>>> C# is just Microsoft Java
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1523,6 +1724,7 @@ MonoBehaviour:
     height: 721
 =======
     x: 424
+<<<<<<< refs/remotes/origin/PROD
     y: 54
     width: 1282
 <<<<<<< refs/remotes/origin/PROD
@@ -1530,7 +1732,15 @@ MonoBehaviour:
 >>>>>>> C# is just Microsoft Java
 =======
     height: 672.5
+<<<<<<< refs/remotes/origin/PROD
 >>>>>>> main menu page
+=======
+=======
+    y: 83
+    width: 1282
+    height: 604
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1550,6 +1760,7 @@ MonoBehaviour:
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< refs/remotes/origin/PROD
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
   m_TargetSize: {x: 1469, y: 700}
 =======
   m_TargetSize: {x: 1282, y: 583}
@@ -1557,6 +1768,12 @@ MonoBehaviour:
 =======
   m_TargetSize: {x: 1282, y: 651.5}
 >>>>>>> main menu page
+=======
+  m_TargetSize: {x: 1282, y: 651.5}
+=======
+  m_TargetSize: {x: 1282, y: 583}
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1580,6 +1797,7 @@ MonoBehaviour:
     m_HBaseRangeMin: -320.5
     m_HBaseRangeMax: 320.5
 <<<<<<< refs/remotes/origin/PROD
+<<<<<<< refs/remotes/origin/PROD
     m_VBaseRangeMin: -145.75
     m_VBaseRangeMax: 145.75
 >>>>>>> C# is just Microsoft Java
@@ -1587,6 +1805,14 @@ MonoBehaviour:
     m_VBaseRangeMin: -162.875
     m_VBaseRangeMax: 162.875
 >>>>>>> main menu page
+=======
+    m_VBaseRangeMin: -162.875
+    m_VBaseRangeMax: 162.875
+=======
+    m_VBaseRangeMin: -145.75
+    m_VBaseRangeMax: 145.75
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1611,6 +1837,7 @@ MonoBehaviour:
     m_Translation: {x: 734.5, y: 350}
 =======
       width: 1282
+<<<<<<< refs/remotes/origin/PROD
       height: 651.5
     m_Scale: {x: 2, y: 2}
 <<<<<<< refs/remotes/origin/PROD
@@ -1618,7 +1845,15 @@ MonoBehaviour:
 >>>>>>> C# is just Microsoft Java
 =======
     m_Translation: {x: 641, y: 325.75}
+<<<<<<< refs/remotes/origin/PROD
 >>>>>>> main menu page
+=======
+=======
+      height: 583
+    m_Scale: {x: 2, y: 2}
+    m_Translation: {x: 641, y: 291.5}
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1635,6 +1870,7 @@ MonoBehaviour:
   m_LastWindowPixelSize: {x: 2938, y: 1442}
 =======
       x: -320.5
+<<<<<<< refs/remotes/origin/PROD
       y: -162.875
       width: 641
       height: 325.75
@@ -1645,7 +1881,18 @@ MonoBehaviour:
 >>>>>>> C# is just Microsoft Java
 =======
   m_LastWindowPixelSize: {x: 2564, y: 1345}
+<<<<<<< refs/remotes/origin/PROD
 >>>>>>> main menu page
+=======
+=======
+      y: -145.75
+      width: 641
+      height: 291.5
+    m_MinimalGUI: 1
+  m_defaultScale: 2
+  m_LastWindowPixelSize: {x: 2564, y: 1208}
+>>>>>>> C# is just Microsoft Java
+>>>>>>> C# is just Microsoft Java
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
