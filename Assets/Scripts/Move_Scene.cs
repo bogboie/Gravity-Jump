@@ -4,62 +4,56 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Move_Scene : MonoBehaviour
 {
-  private float Start_Time;
-  public float LoadTime = 5;
-  public GameObject DotMain;
-  public GameObject initialDot;
-  public int DotCount  = 300;
-  private GameObject[] LoadingDots ;
-  private Vector3[] ScaleChanges;
-  public float Biggest_Size = 0.8f;
-  public float position_difference = .006f;
+    private float Start_Time;
+    public float LoadTime = 5;
+    public GameObject DotMain;
+    public GameObject initialDot;
+    public int DotCount = 300;
+    private GameObject[] LoadingDots;
+    private Vector3[] ScaleChanges;
+    public float Biggest_Size = 0.8f;
+    public float position_difference = .006f;
+    public Vector3 BALLSPEED;
 
 
-  void Start()
-  {
-    Start_Time = Time.time;
-    LoadingDots = new GameObject[DotCount];
-    ScaleChanges = new Vector3[DotCount];
-    for (int i = 0; i < DotCount; i++)
+    void Start()
     {
-      LoadingDots[i] = Instantiate(DotMain,initialDot.transform);
-      LoadingDots[i].transform.localScale = new Vector3(Biggest_Size,Biggest_Size, Biggest_Size);
-      LoadingDots[i].transform.position += new Vector3(0.0f,0.0f,position_difference*i);
-      Vector3 Starting_Scale = new Vector3(0.001f,0.001f,0.001f);
-      for (int x = 0; x < i*1000/DotCount; x++)
-      {
-        LoadingDots[i].transform.localScale -= Starting_Scale;
-        if (LoadingDots[i].transform.localScale.y < 0.1f || LoadingDots[i].transform.localScale.y > Biggest_Size)
+        Start_Time = Time.time;
+        LoadingDots = new GameObject[DotCount];
+        ScaleChanges = new Vector3[DotCount];
+        for (int i = 0; i < DotCount; i++)
         {
-          Starting_Scale = -Starting_Scale;
-        }
-      }
+            LoadingDots[i] = Instantiate(DotMain, initialDot.transform);
+            LoadingDots[i].transform.localScale = new Vector3(Biggest_Size, Biggest_Size, Biggest_Size);
+            LoadingDots[i].transform.position += new Vector3(0.0f, 0.0f, position_difference * i);
+            Vector3 Starting_Scale = BALLSPEED;
+            for (int x = 0; x < i * 1000 / DotCount; x++)
+            {
+                LoadingDots[i].transform.localScale -= Starting_Scale;
+                if (LoadingDots[i].transform.localScale.y < 0.1f || LoadingDots[i].transform.localScale.y > Biggest_Size)
+                {
+                    Starting_Scale = -Starting_Scale;
+                }
+            }
 
-      ScaleChanges[i] = Starting_Scale;
+            ScaleChanges[i] = Starting_Scale;
+        }
     }
-  }
     // Update is called once per fram
     void Update()
     {
-      for (int i = 0; i < DotCount; i++)
-      {
-        LoadingDots[i].transform.localScale -= ScaleChanges[i];
-        if (LoadingDots[i].transform.localScale.y < 0.1f || LoadingDots[i].transform.localScale.y > Biggest_Size)
+        for (int i = 0; i < DotCount; i++)
         {
-          ScaleChanges[i] = -ScaleChanges[i];
+            LoadingDots[i].transform.localScale -= ScaleChanges[i];
+            if (LoadingDots[i].transform.localScale.y < 0.1f || LoadingDots[i].transform.localScale.y > Biggest_Size)
+            {
+                ScaleChanges[i] = -ScaleChanges[i];
+            }
         }
-      }
-        if (Time.time-Start_Time > LoadTime) {
-          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (Time.time - Start_Time > LoadTime)
+        {
+            EventManager.NextScene();
         }
 
     }
-/*void Update () {
-    nasru -= Time.deltaTime;
-    if(nasru <= 0)
-    {
-        nasru = 3;
-        GameObject go = GameObject.Instantiate(enemyMake);
-        go.transform.localScale = transform.position;
-    }*/
 }

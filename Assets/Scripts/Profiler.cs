@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Profiler : MonoBehaviour
 {
     public static bool show = true;
-    private int framesToWait = 30;
+    public static int framesToWait = 30;
     private int framesLeft;
     private double previousTime;
     [SerializeField]
@@ -14,7 +14,7 @@ public class Profiler : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI text;
     // Start is called before the first frame update
-    private void Start()
+    private void Start()     
     {
         previousTime = 0;
         framesLeft = framesToWait;
@@ -25,15 +25,13 @@ public class Profiler : MonoBehaviour
     void Update()
     {
         framesLeft--;
-        if (framesLeft == 0)
+        if (framesLeft == 0 && show)
         {
-            fps = framesToWait / (Time.time - previousTime);
-            if (show)
-            {
-                text.text = Mathf.Round((float)fps).ToString();
-            }
+            float currentTime = Time.time;
+            fps = framesToWait / (currentTime - previousTime);
+            text.text = Mathf.Round((float)fps).ToString();
             framesLeft = framesToWait;
-            previousTime = Time.time;
+            previousTime = currentTime;
         }
     }
     

@@ -16,25 +16,15 @@ public class ClickAndToggle : MonoBehaviour
     {
         return (a - b).magnitude;
     }
-
+    public void OnMouseDown()
+    {
+        gameObject.SetActive(false);
+        AudioFX.Toggle();
+        other.SetActive(true);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == UnityEngine.TouchPhase.Began)
-            {
-                float dist = Dist(touch.position, transform.position);
-                if (dist < 60)
-                {
-                    gameObject.SetActive(false);
-                    AudioFX.Toggle();
-                    other.SetActive(true);
-
-                }
-            }
-        }
-    }
+      }
 }

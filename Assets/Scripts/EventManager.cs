@@ -16,13 +16,37 @@ public class EventManager : MonoBehaviour
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public static  void GoToStartingScene()
+    public static void GoToSettingsScene()
+    {
+        if (OnSceneClose != null)
+        {
+            OnSceneClose();
+        }
+        SceneManager.LoadScene(2);
+    }
+    public static void GoToLevelSelectScene()
     {
         if (OnSceneClose != null)
         {
             OnSceneClose();
         }
         SceneManager.LoadScene(1);
+    }
+    public static void GoToStartingScene()
+    {
+        if (OnSceneClose != null)
+        {
+            OnSceneClose();
+        }
+        SceneManager.LoadScene(0);
+    }
+    public static void GoToD0L0()
+    {
+        if (OnSceneClose != null)
+        {
+            OnSceneClose();
+        }
+        SceneManager.LoadScene(3);
     }
     // Start is call
     public static void CallRespawn () {
