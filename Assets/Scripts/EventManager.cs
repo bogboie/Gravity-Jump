@@ -54,4 +54,12 @@ public class EventManager : MonoBehaviour
         OnRespawn();
       }
     }
+    public static void GoToTutorialScene()
+    {
+        if (OnSceneClose != null)
+        {
+            OnSceneClose();
+        }
+        SceneManager.LoadScene(1);
+    }
 }

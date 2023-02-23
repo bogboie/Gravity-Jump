@@ -14,5 +14,12 @@ public class PlayButtonScript : MonoBehaviour
     {
         EventManager.GoToSettingsScene();
     }
-
+    public void Start_Tutorial()
+    {
+        EventManager.GoToTutorialScene();
+    }
+    public void NextLevel()
+    {
+        EventManager.NextScene();
+    }
 }
