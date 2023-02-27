@@ -28,7 +28,8 @@ public class PlayerMovement : MonoBehaviour
     private Collider gateColliderleft;
     private Collider gateColliderright;
     private Vector2 Jump_Button_Pos;
-    
+    public AudioSource roll;
+
 
     public AudioSource JumpAudio;
     public AudioSource pushSource;
@@ -40,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         right_button.transform.localScale = hide_button;
         left.interactable = false;
         right.interactable = false;
-        AudioFX.Play(pushSource);
     }
     private void show_buttons()
     {
@@ -104,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
+            AudioFX.Play(roll);
             canJump = true;
         }
         else if (other.gameObject.tag == "Player Killer")
@@ -112,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.gameObject.tag == "Choice")
         {
+            roll.Stop();
             show_buttons();
               rb.velocity = new Vector3(rb.velocity.x,rb.velocity.y,0);
               rb.angularVelocity = Vector3.zero;
@@ -135,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+
     private float Dist(Vector2 A, Vector2 B)
     {
         Vector2 C = A - B;
@@ -148,6 +151,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(0, 2000, 0);
             canJump = false;
             AudioFX.Play(JumpAudio);
+
         }
     }
     private void OnTriggerStay(Collider other)
@@ -155,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             canJump = true;
+
         }
     }
     private void OnTriggerExit(Collider other)
@@ -162,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             canJump = false;
+            roll.Stop();
         }
         else if (other.gameObject.tag == "Choice")
         {
