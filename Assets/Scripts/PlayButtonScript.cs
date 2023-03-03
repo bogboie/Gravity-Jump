@@ -22,4 +22,8 @@ public class PlayButtonScript : MonoBehaviour
     {
         EventManager.NextScene();
     }
+    public void Start_Level_Select()
+    {
+        EventManager.GoToLevelSelectScene();
+    }
 }
