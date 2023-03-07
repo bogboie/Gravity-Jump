@@ -62,4 +62,12 @@ public class EventManager : MonoBehaviour
         }
         SceneManager.LoadScene(1);
     }
+    public static void GoToScene(int Scene_Number)
+    {
+        if (OnSceneClose != null)
+        {
+            OnSceneClose();
+        }
+        SceneManager.LoadScene(Scene_Number);
+    }
 }
