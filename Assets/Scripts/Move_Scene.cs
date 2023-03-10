@@ -14,7 +14,7 @@ public class Move_Scene : MonoBehaviour
     public float Biggest_Size = 0.8f;
     public float position_difference = .006f;
     public Vector3 BALLSPEED;
-
+    public int dimension_completed = 0;
 
     void Start()
     {
@@ -52,7 +52,11 @@ public class Move_Scene : MonoBehaviour
         }
         if (Time.time - Start_Time > LoadTime)
         {
-            EventManager.NextScene();
+            PlayerPrefs.SetInt("Dimensions", dimension_completed);
+            print("Setting Dimensions Completed to " + dimension_completed.ToString());
+            EventManager.GoToLevelSelectScene();
+
+
         }
 
     }

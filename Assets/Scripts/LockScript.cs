@@ -12,7 +12,6 @@ public class LockScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("Dimensions", 0);
         self_image = gameObject.GetComponent<Image>();
         int dim_completed = PlayerPrefs.GetInt("Dimensions");
 
