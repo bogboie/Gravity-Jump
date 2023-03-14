@@ -590,7 +590,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494980069}
         m_TargetAssemblyTypeName: GoHome, Assembly-CSharp
-        m_MethodName: GoToHome
+        m_MethodName: StartD3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -861,7 +861,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494980069}
         m_TargetAssemblyTypeName: GoHome, Assembly-CSharp
-        m_MethodName: GoToHome
+        m_MethodName: StartD1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1571,7 +1571,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494980069}
         m_TargetAssemblyTypeName: GoHome, Assembly-CSharp
-        m_MethodName: GoToHome
+        m_MethodName: StartD2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2116,7 +2116,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494980069}
         m_TargetAssemblyTypeName: GoHome, Assembly-CSharp
-        m_MethodName: GoToHome
+        m_MethodName: StartD4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
