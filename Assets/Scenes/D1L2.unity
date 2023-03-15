@@ -3398,7 +3398,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6147603180385036635, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
   m_PrefabInstance: {fileID: 6147603180670876179}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6147603180670876180}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -31968,10 +31968,35 @@ PrefabInstance:
     - target: {fileID: 6147603180385036635, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1661278986}
+      objectReference: {fileID: 6147603180670876181}
+    - target: {fileID: 6147603180385036635, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147603180385036635, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EventManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6147603180680710533, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1661278986}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+--- !u!1 &6147603180670876180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6147603180385036629, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+  m_PrefabInstance: {fileID: 6147603180670876179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6147603180670876181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147603180670876180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bb81dd221c947f38232353e54ba96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
