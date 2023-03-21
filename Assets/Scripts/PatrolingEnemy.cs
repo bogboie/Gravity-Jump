@@ -20,6 +20,8 @@ enum Direction
     private float StartingXPos;
     private Rigidbody rb;
     private Vector3 OG_Place;
+    public AudioSource EnemyDeath;
+    public AudioSource PlayerDeath;
 
     public void kms() {
       gameObject.SetActive(false);
@@ -106,7 +108,9 @@ enum Direction
         print(slope);
         if (slope > 1) { // means that the player jumped on "top" of us(enemy) and we are gunnna dy
           kms();
+        AudioFX.Play(EnemyDeath);
       } else { // means that the player is gunna die HEHEHEHAW
+      AudioFX.Play(PlayerDeath);
         }
       }
     }
