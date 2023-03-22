@@ -15,6 +15,7 @@ public class SpecialEnemy : MonoBehaviour
     public AudioSource EnemyDeath;
     public AudioSource PlayerDeath;
     public AudioSource EnemyMove;
+    public AudioSource EnemyAlert;
 
     public void Reset() {
       // go back to starting_pos
@@ -94,6 +95,7 @@ public class SpecialEnemy : MonoBehaviour
     {
       dist_to_player = (player.transform.position-transform.position).magnitude;
       if (dist_to_player < Vision) {
+      AudioFX.Play(EnemyAlert);
         Follow_Player();
       AudioFX.Play(EnemyMove);
       }
