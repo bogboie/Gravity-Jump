@@ -5,31 +5,39 @@ using System;
 
 public class AudioFX : MonoBehaviour
 {
-    private static bool Muted = false;
-
+    private static MissingReferenceException err = new MissingReferenceException("Null Audio Source");
     public static void Mute()
     {
-        Muted = true;
+        PlayerPrefs.SetInt("SFXMuted", 1);
     }
     public static void UnMute()
     {
-        Muted = false;
+        PlayerPrefs.SetInt("SFXMuted", 0);
     }
     public static void Toggle()
     {
-        Muted = !Muted;
-        print("Audio FX Mute toggled to <" + Muted.ToString() + ">");
+
+        int current = PlayerPrefs.GetInt("SFXMuted");
+        if (current == 1)
+        {
+            PlayerPrefs.SetInt("SFXMuted", 0);
+        } else
+        {
+            PlayerPrefs.SetInt("SFXMuted", 1);
+        }
+        print("Audio FX Mute toggled to <" + current.ToString() + ">");
     }
 
 
     public static void Play(AudioSource audio)
     {
+        int Muted = PlayerPrefs.GetInt("SFXMuted");
         if (audio == null)
         {
-            print("Audio FX Manager has been given an audio Source which identifies as <null>");   
-            return;
+            //print("Audio FX Manager has been given an audio Source which identifies as <null>");
+            throw err;
         }
-        if (Muted) { return; }
+        if (Muted == 1) { return; }
         audio.Play();
     }
     

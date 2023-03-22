@@ -10,6 +10,10 @@ public class FancyLoading : MonoBehaviour
     private float a = 2.1f;
     [SerializeField]
     private float Land_Every = 4;
+    [SerializeField]
+    private float timeToLoad;
+    [SerializeField]
+    private int dimension_completed;
     // Start is called before the first frame update
     private float angle(float time)
     {
@@ -26,6 +30,12 @@ public class FancyLoading : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.time >= timeToLoad)
+        {
+            PlayerPrefs.SetInt("Dimensions", dimension_completed);
+            print("Setting Dimensions Completed to " + dimension_completed.ToString());
+            EventManager.GoToLevelSelectScene();
+        }
         Vector3 euler = new Vector3(0, 0, angle(Time.time));
         HeHeHeHaw.rotation = Quaternion.Euler(euler);
     }
