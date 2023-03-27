@@ -32,9 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/D1L3.unity
     guid: ebc59fc36d943447ab2adaafc7f764b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Transition Dimension D1-D2.unity
     guid: f39b969ece1384ab0a03180ca6251cab
+  - enabled: 1
+    path: Assets/Scenes/Fancy Loadin 1.unity
+    guid: 356b912dd78d34c8fb47b2331514f835
   - enabled: 1
     path: Assets/Scenes/D2L1.unity
     guid: 890c56cb683344021a7fb7eb22b2c779
@@ -47,9 +50,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/D2L4.unity
     guid: 3e732437b899049478417febeabec229
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Transition Dimension D2-D3.unity
     guid: a4b41dc6490b34339a547124078c73c6
+  - enabled: 1
+    path: Assets/Scenes/Fancy Loadin 2.unity
+    guid: 2f68081e7a3554641bf048b86a1587d6
   - enabled: 1
     path: Assets/Scenes/D3 Tutorial.unity
     guid: aa94e5af2c57f40a880fed598219e9d3
@@ -65,9 +71,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/D3L4.unity
     guid: b11ab26b273d745af94b670fe00eabdf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Transition Dimension D3-D4.unity
     guid: ed27ca06df4764b6597c305ef328305a
+  - enabled: 1
+    path: Assets/Scenes/Fancy Loadin 3.unity
+    guid: f2f091746f860451bac55896ae0f666c
   - enabled: 1
     path: Assets/Scenes/D4 Tutorial.unity
     guid: 508564967cd3f4402bda623b05800c9b
