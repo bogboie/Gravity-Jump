@@ -1929,10 +1929,10 @@ MonoBehaviour:
   Vision: 7.78
   Speed: 1.4
   maxvelocity: 3.5
-  EnemyDeath: {fileID: 685916037}
-  PlayerDeath: {fileID: 1925960614}
-  EnemyMove: {fileID: 1480502445}
-  EnemyAlert: {fileID: 1992856930}
+  EnemyDeath: {fileID: 0}
+  PlayerDeath: {fileID: 0}
+  EnemyMove: {fileID: 0}
+  EnemyAlert: {fileID: 0}
 --- !u!135 &156182298
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2033,7 +2033,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156182296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.651, y: -14.26, z: 13.32}
+  m_LocalPosition: {x: 1.651, y: -14.09, z: 13.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9142,8 +9142,8 @@ MonoBehaviour:
   Fzero: 100
   Threshold: 2
   StartingXPos: 0
-  EnemyDeath: {fileID: 685916037}
-  PlayerDeath: {fileID: 1925960614}
+  EnemyDeath: {fileID: 0}
+  PlayerDeath: {fileID: 0}
 --- !u!135 &719658047
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15348,8 +15348,8 @@ MonoBehaviour:
   maxvelocity: 3.5
   EnemyDeath: {fileID: 685916037}
   PlayerDeath: {fileID: 1518617683}
-  EnemyMove: {fileID: 1480502445}
-  EnemyAlert: {fileID: 1992856930}
+  EnemyMove: {fileID: 0}
+  EnemyAlert: {fileID: 0}
 --- !u!135 &1231525245
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15450,7 +15450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231525243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.651, y: 14.01, z: 3.93}
+  m_LocalPosition: {x: 1.651, y: 14.46, z: 3.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22441,8 +22441,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925693945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12048434, y: 1.7680001, z: 0.00027}
-  m_LocalScale: {x: 0.36145294, y: 1.83, z: 0.27506647}
+  m_LocalPosition: {x: 0.12048434, y: 1.7680001, z: 0.01724979}
+  m_LocalScale: {x: 0.36145294, y: 1.83, z: 0.09173859}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 63842001}
@@ -25771,8 +25771,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144545782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12048434, y: 1.7680001, z: -0.02941}
-  m_LocalScale: {x: 0.36145294, y: 1.83, z: 0.29364258}
+  m_LocalPosition: {x: 0.12048434, y: 1.7680001, z: 0.01724979}
+  m_LocalScale: {x: 0.36145294, y: 1.83, z: 0.09173859}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 417956125}
