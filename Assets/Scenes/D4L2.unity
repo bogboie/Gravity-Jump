@@ -27626,10 +27626,10 @@ MonoBehaviour:
   Vision: 7.78
   Speed: 1.4
   maxvelocity: 3.5
-  EnemyDeath: {fileID: 0}
-  PlayerDeath: {fileID: 0}
-  EnemyMove: {fileID: 0}
-  EnemyAlert: {fileID: 0}
+  EnemyDeath: {fileID: 973509415}
+  PlayerDeath: {fileID: 200775329}
+  EnemyMove: {fileID: 704841927}
+  EnemyAlert: {fileID: 1695331048}
 --- !u!135 &1735199222
 SphereCollider:
   m_ObjectHideFlags: 0
