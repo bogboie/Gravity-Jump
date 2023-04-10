@@ -23,7 +23,7 @@ public class PauseScript : MonoBehaviour
     }
     public void UnPause()
     {
-        Time.timeScaless = 1;
+        Time.timeScale = 1;
 
     }
 }
