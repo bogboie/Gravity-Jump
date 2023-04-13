@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource JumpAudio;
     public AudioSource pushSource;
     public AudioSource woodSource;
+    public void Awake()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("musicVolume");
+    }
 
     private void hide_buttons()
     {

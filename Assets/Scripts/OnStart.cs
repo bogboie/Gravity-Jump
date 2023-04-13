@@ -8,7 +8,6 @@ public class OnStart : MonoBehaviour
     private void Awake()
     {
         AudioListener.volume = PlayerPrefs.GetFloat("musicVolume");
-        EventManager.GoToScene(24);
     }
     void Start()
     {
