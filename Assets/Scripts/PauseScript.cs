@@ -24,6 +24,6 @@ public class PauseScript : MonoBehaviour
     public void UnPause()
     {
         Time.timeScale = 1;
-
+        
     }
 }
