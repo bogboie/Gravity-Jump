@@ -879,15 +879,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Congrats ! \nYou have won!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a40af3e55de6d4b9e818759d35656344, type: 2}
+  m_sharedMaterial: {fileID: -5380693212336678925, guid: a40af3e55de6d4b9e818759d35656344, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282433568
-  m_fontColor: {r: 0.12459949, g: 0.754717, b: 0.25083485, a: 1}
+    rgba: 4279774937
+  m_fontColor: {r: 0.8509804, g: 0.18039216, b: 0.09411765, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535

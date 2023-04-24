@@ -31771,6 +31771,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1661278986}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_text
+      value: "Congrats ! \nYou have won!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a40af3e55de6d4b9e818759d35656344, type: 2}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.09411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5380693212336678925, guid: a40af3e55de6d4b9e818759d35656344, type: 2}
+    - target: {fileID: 6147603180692038133, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279774937
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92b7b999a83294fbba6cc52788365e3b, type: 3}
 --- !u!1 &6147603180670876180 stripped
