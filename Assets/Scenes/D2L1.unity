@@ -7072,7 +7072,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 297d3302aa8b54792a2d72a69a39122e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -15880,7 +15880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraObject: {fileID: 1092279922}
   canJump: 0
-  roll: {fileID: 939496432}
+  roll: {fileID: 624689418}
   JumpAudio: {fileID: 1625600250}
   pushSource: {fileID: 1936441612}
   woodSource: {fileID: 624689418}

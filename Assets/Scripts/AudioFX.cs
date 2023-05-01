@@ -38,6 +38,7 @@ public class AudioFX : MonoBehaviour
             throw err;
         }
         if (Muted == 1) { return; }
+
         audio.Play();
     }
     

@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             AudioFX.Play(roll);
+            roll.Play();
             canJump = true;
         }
         else if (other.gameObject.tag == "Player Killer")
