@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,8 +21,16 @@ public class SoundManager : MonoBehaviour
     }
     private void Load()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
-        AudioListener.volume = volumeSlider.value;
+        try
+        {
+            volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+            AudioListener.volume = volumeSlider.value;
+
+        }
+        catch (Exception)
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("musicVolume");
+        }
 
     }
     private void Save()
