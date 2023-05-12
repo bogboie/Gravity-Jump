@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     private Transform ownTransform;
     [SerializeField]
     private bool canJump = false;
-    private Vector3 cam_offset = new Vector3(10, 0, 0);
     private Vector3 hide_button = new Vector3(0, 1, 1);
     private Vector3 show_button = new Vector3(0.3f, 0.3f, 0.3f);
     private Transform starting_pos;
@@ -97,12 +96,12 @@ public class PlayerMovement : MonoBehaviour
         hide_buttons();
         Jump_Button_Pos = new Vector2(Jump_Button.transform.position.x, Jump_Button.transform.position.z);
         //woodSource.Play();
+
+            
+
     }
 
-    private void LateUpdate()
-    {
-        CameraObject.transform.position = this.transform.position + cam_offset;
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -183,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (canJump) {
           Down.SetActive(false);
@@ -202,5 +201,6 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+ 
     }
 }
