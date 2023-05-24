@@ -2785,7 +2785,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1302531112}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
