@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: 3ab577ce8973141dead62a0430205527
   - enabled: 0
-    path: Assets/Scenes/Gravity Bound Demo.unity
+    path: 
     guid: 97d90d55715f44c73b4b90849eb11421
   - enabled: 1
     path: Assets/Scenes/Story Slides.unity
@@ -77,6 +77,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/D4L2.unity
     guid: c10ae4cc6ec51461cbdfe780fa35acc8
+  - enabled: 1
+    path: Assets/Scenes/D4L3.unity
+    guid: fda2dd95913664a5081532e0d0e6f142
   - enabled: 1
     path: Assets/Scenes/Info_Scene.unity
     guid: fabee15fb18714be8a9040445ab003f4

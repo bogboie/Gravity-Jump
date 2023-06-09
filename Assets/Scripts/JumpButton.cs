@@ -10,8 +10,8 @@ public class JumpButton : MonoBehaviour
       Player = GameObject.FindWithTag("Player");
       Player_Script = Player.GetComponent<PlayerMovement>();
     }
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        Player_Script.Jump();
+      Player_Script.Jump();
     }
 }

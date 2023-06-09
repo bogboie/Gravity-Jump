@@ -8,6 +8,8 @@ public class EventManager : MonoBehaviour
     public delegate void EmptyEvent();
     public static event EmptyEvent OnRespawn;
     public static event EmptyEvent OnSceneClose;
+    public static event EmptyEvent OnWin;
+
     public static void NextScene()
     {
         if (OnSceneClose != null)
@@ -53,6 +55,12 @@ public class EventManager : MonoBehaviour
       if (OnRespawn != null) {
         OnRespawn();
       }
+    }
+    public static void CallOnWin() {
+        if (OnRespawn != null) {
+            print("calling onwin from eventmanager!");
+            OnWin();
+        }
     }
     public static void GoToTutorialScene()
     {
