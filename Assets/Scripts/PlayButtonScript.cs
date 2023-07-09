@@ -28,7 +28,7 @@ public class PlayButtonScript : MonoBehaviour
     }
     public void Go_To_Info_Page()
     {
-        EventManager.GoToScene(23);
+        EventManager.GoToScene(24);
     }
     public void GOTOHOUSE()
     {
