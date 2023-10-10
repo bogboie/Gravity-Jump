@@ -13,7 +13,6 @@ public class WinCondition : MonoBehaviour
     {
        if (other.gameObject.tag == "Player")
         {
-            print("Player WOn!!!!");
             EventManager.CallOnWin();
         }
     }

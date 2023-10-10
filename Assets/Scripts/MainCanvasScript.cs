@@ -55,7 +55,7 @@ public class MainCanvasScript : MonoBehaviour
     void win() 
     {
         GameObject wintextObj =  Find("YOU WON L");
-        
+        print("MOVING TO NEXT LEVEL");
         wintextObj.SetActive(true);
         GameObject nextLevelObj =  Find("Next Level");
         nextLevelObj.SetActive(true);

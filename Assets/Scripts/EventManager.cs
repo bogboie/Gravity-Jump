@@ -57,8 +57,7 @@ public class EventManager : MonoBehaviour
       }
     }
     public static void CallOnWin() {
-        if (OnRespawn != null) {
-            print("calling onwin from eventmanager!");
+        if ( OnWin != null) {
             OnWin();
         }
     }
